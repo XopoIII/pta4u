@@ -1,6 +1,6 @@
 import { images } from 'next/dist/build/webpack/config/blocks/images';
 import Link from 'next/link';
-
+import React from 'react';
 const services = [
   {
     title: 'Письменный перевод любой документации и текстов',
@@ -59,7 +59,7 @@ export default function Pta4uServices() {
             документов и многое другое.
           </p>
         </div>
-        <div className={'mt-[40px] grid grid-cols-1 lg:grid-cols-3 gap-6'}>
+        <div className={'mt-[40px] flex flex-wrap justify-center gap-6'}>
           {services.map((service, i) => {
             const classes = ['w-full bg-cover lg:w-[380px] h-[170px] lg:h-[250px] rounded-[30px]'];
             classes.push(service.image);

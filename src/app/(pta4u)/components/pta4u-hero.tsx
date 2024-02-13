@@ -1,6 +1,6 @@
 import Pta4uHeroSlider from './pta4u-hero-slider';
 import Pta4uHeroForm from './pta4u-hero-form';
-
+import React from 'react';
 const slides: IHeroSlide[] = [
   {
     title:
@@ -52,7 +52,7 @@ export default function Pta4uHero() {
           Переводим на 45 языков, низкие цены, делаем все быстро и удаленно, вам только приехать и
           забрать. Можем отправить почтой.
         </p>
-        <div className={'mt-[28px] lg:mt-[35px] w-full relative'}>
+        <div className={'mt-[28px] lg:mt-[35px] w-full relative flex flex-col items-center'}>
           <Pta4uHeroSlider slides={slides} />
           <Pta4uHeroForm
             className={'mt-[20px] lg:mt-0 lg:absolute right-[40px] bottom-[40px] z-50 w-[344px]'}

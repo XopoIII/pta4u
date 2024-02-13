@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import React from 'react';
 export default function Pta4uQuality() {
   return (
     <div className={'container h-full mx-auto px-5'}>

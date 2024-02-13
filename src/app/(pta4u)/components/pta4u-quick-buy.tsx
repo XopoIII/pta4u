@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import React from 'react';
 const items = [
   { title: 'В офисе компании', icon: 'office.svg', color: 'bg-qb-green', url: '', w: 58, h: 38 },
   { title: 'По электронной почте', icon: 'mail.svg', color: 'bg-qb-blue', url: '', w: 62, h: 38 },
@@ -23,7 +23,7 @@ export default function Pta4uQuickBuy() {
       </h1>
       <p
         className={
-          'text-[14px] lg:text-[18px] max-w-[780px] leading-5.5 text-center mx-auto mt-[11px] lg:mt-5 text-[#747373]'
+          'text-[14px] lg:text-[18px] max-w-[780px] leading-[18px] text-center mx-auto mt-[3px] lg:mt-5 text-[#747373]'
         }>
         Время – очень драгоценный ресурс. Мы высоко ценим Ваше время, и предлагаем различные способы
         оформления и получения заказа.

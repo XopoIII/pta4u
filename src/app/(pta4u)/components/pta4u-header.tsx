@@ -3,6 +3,8 @@ import logo from '../icons/logo_d.svg';
 import phone from '../icons/phone.svg';
 import Link from 'next/link';
 import Pta4uButton from './pta4u-button';
+import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Pta4uHeader() {
   const menu = [
@@ -40,6 +42,7 @@ export default function Pta4uHeader() {
         <Pta4uButton type={'outline'} size={'md'}>
           Заказать
         </Pta4uButton>
+        <GiHamburgerMenu className="ml-3 text-2xl lg:hidden" />
       </div>
     </div>
   );

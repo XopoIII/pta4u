@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-
+import React from 'react';
 interface IProps {
   placeholder?: string;
   value?: string;

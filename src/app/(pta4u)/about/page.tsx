@@ -9,7 +9,7 @@ import Users from '../icons/users.svg';
 import Pta4uReviews from '../components/pta4u-reviews';
 import Pta4uQuickBuy from '../components/pta4u-quick-buy';
 import Pta4uPayments from '../components/pta4u-payments';
-import Pta4uForYou from "../components/pta4u-for-you";
+import Pta4uForYou from '../components/pta4u-for-you';
 
 export const metadata: Metadata = {
   title: 'Polyglot - translation agency for you',

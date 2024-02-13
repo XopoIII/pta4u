@@ -3,7 +3,7 @@ import Pta4uButton from './pta4u-button';
 interface IProps {
   className?: string;
 }
-
+import React from 'react';
 export default function Pta4uHeroForm({ className }: IProps) {
   const classes = [' bg-[#F2F2F2] lg:bg-white pt-[38px] pb-[20px] px-[20px] rounded-[20px]'];
   className && classes.push(className);

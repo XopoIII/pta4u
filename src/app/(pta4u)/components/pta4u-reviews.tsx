@@ -6,21 +6,22 @@ import Star from '../icons/star.svg';
 import Image from 'next/image';
 import Pta4uButton from './pta4u-button';
 const images = [
-  '/images/sponsors/image 1047.png',
-  '/images/sponsors/image 1048.png',
-  '/images/sponsors/image 1049.png',
-  '/images/sponsors/image 1050.png',
-  '/images/sponsors/image 1051.png',
-  '/images/sponsors/image 1053.png',
-  '/images/sponsors/image 1048.png',
-  '/images/sponsors/image 1049.png',
-  '/images/sponsors/image 1050.png',
-  '/images/sponsors/image 1050.png',
-  '/images/sponsors/image 1051.png',
-  '/images/sponsors/image 1053.png',
-  '/images/sponsors/image 1048.png',
-  '/images/sponsors/image 1049.png'
+  '/images/sponsors/first.png',
+  '/images/sponsors/image1048.png',
+  '/images/sponsors/image1049.png',
+  '/images/sponsors/second.png',
+  '/images/sponsors/image1051.png',
+  '/images/sponsors/third.png',
+  '/images/sponsors/image1048.png',
+  '/images/sponsors/image1049.png',
+  '/images/sponsors/Vector.png',
+  '/images/sponsors/Vector.png',
+  '/images/sponsors/image1051.png',
+  '/images/sponsors/first.png',
+  '/images/sponsors/image1048.png',
+  '/images/sponsors/image1049.png'
 ];
+import React from 'react';
 export default function Pta4uReviews() {
   return (
     <div className={'container h-full mx-auto px-5 flex flex-col items-center'}>

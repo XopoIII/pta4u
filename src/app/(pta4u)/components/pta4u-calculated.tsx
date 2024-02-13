@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import WhiteLogo from '../icons/logo_white.svg';
 import Pta4uButton from './pta4u-button';
-
+import React from 'react';
 export default function Pta4uCalculated() {
   return (
     <div className={'container h-full mx-auto px-5'}>

@@ -2,7 +2,7 @@ import LogoSign from '../icons/logo_sign.svg';
 import Social from '../icons/social-wtf.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import React from 'react';
 const footerMenu = [
   {
     title: 'Услуги',
