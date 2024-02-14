@@ -34,7 +34,8 @@ const Object: React.FC<{ objText: ObjText }> = ({ objText }) => {
         {objText.notariusArr.map((item, _) => (
           <>
             <div key={item.id} className="flex items-start gap-3">
-              <div className="min-w-2 h-2 rounded-full bg-[#F55751] mt-1" />
+              <div className="md:flex hidden min-w-2 h-2 rounded-full bg-[#F55751] mt-2" />
+              <div className="md:hidden flex min-w-2 h-2 rounded-full bg-[#F55751] mt-1" />
               <div>
                 <h2 className=" font-bold text-sm leading-[16.8px] text-dark md:text-base">
                   {item.title}

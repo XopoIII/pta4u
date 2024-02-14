@@ -116,9 +116,9 @@ function firstTabs() {
         </div>
         <div className="flex justify-center items-center gap-[2.5px]">
           <p className="xl:hidden text-[14px] font-normal leading-[17px] text-right">По алфавиту</p>
-          <p className="hidden xl:flex text-[16px] font-normal leading-[17px] text-right text-[#9E989B]">
-            Упорядочить по: <span className="text-[#252627]"> Алфавиту</span>
-          </p>
+          <pre className="hidden xl:flex text-[16px] font-normal leading-[17px] text-right text-[#9E989B]">
+            Упорядочить по: <span className="text-[#252627]">Алфавиту</span>
+          </pre>
           <IoIosArrowDown className="text-base xl:text-[18px]" />
         </div>
       </div>
@@ -155,7 +155,7 @@ function firstTabs() {
             <button className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3">
               Заказ
             </button>
-            <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4">
+            <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
               Заказать
             </button>
           </div>

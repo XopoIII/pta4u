@@ -22,7 +22,7 @@ const arrServices = [
 const Slider = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   return (
-    <div className="overflow-scroll">
+    <div className=" relative ">
       <ReactSimplyCarousel
         activeSlideIndex={activeSlideIndex}
         onRequestChange={setActiveSlideIndex}
@@ -31,7 +31,8 @@ const Slider = () => {
         forwardBtnProps={{
           style: {
             position: 'absolute',
-            right: 0,
+            right: -15,
+            zIndex: 50,
             alignSelf: 'center',
             background: 'black',
             border: 'none',
@@ -50,7 +51,8 @@ const Slider = () => {
           style: {
             position: 'absolute',
             alignSelf: 'center',
-            left: 0,
+            left: -15,
+            zIndex: 50,
             background: 'black',
             border: 'none',
             borderRadius: '50%',

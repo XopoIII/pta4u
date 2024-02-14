@@ -31,4 +31,5 @@
 
 .div:hover button {
   background-image: linear-gradient(to right, #f55751, #d83ca3);
+  color: white;
 }
