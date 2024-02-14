@@ -43,7 +43,7 @@ export default function Pta4uForYou() {
           сотрудничество с нами за качество сервиса и качество предоставляемых услуг.
         </p>
       </div>
-      <div className="mt-[21px] lg:mt-[36px] flex flex-wrap gap-[19px] lg:gap-[24px] justify-between">
+      <div className="mt-[21px] lg:mt-[36px] flex flex-wrap gap-[19px] lg:gap-[24px] justify-center">
         {steps.map((step, i) => {
           return (
             <div key={i} className="max-w-[158px] lg:max-w-[384px]">
