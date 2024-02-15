@@ -59,7 +59,7 @@ export default function Pta4uServices() {
             документов и многое другое.
           </p>
         </div>
-        <div className={'mt-[40px] flex flex-wrap justify-center gap-6'}>
+        <div className={'mt-[40px] flex flex-wrap justify-center gap-6 xl:gap-y-12'}>
           {services.map((service, i) => {
             const classes = ['w-full bg-cover lg:w-[380px] h-[170px] lg:h-[250px] rounded-[30px]'];
             classes.push(service.image);

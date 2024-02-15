@@ -9,8 +9,8 @@ function ProfServices() {
   const handleActive = useCallback(() => setActive((prev) => !prev), []);
 
   return (
-    <div className="px-5 bg-[#F2F2F2] mt-[49px] flex flex-col justify-center items-center pb-[36px] xl:pt-[73px] xl:pb-[85px]">
-      <h2 className="text-dark text-[18px] leading-[21.6px] font-semibold text-center pt-[9px] px-6 md:text-xl">
+    <div className="px-5 bg-[#F2F2F2] mt-[49px] flex flex-col justify-center items-center pb-[36px] xl:pt-[73px] xl:pb-[45px]">
+      <h2 className="text-dark text-[18px] leading-[21.6px] font-semibold text-center pt-[9px] px-6 md:text-xl xl:text-[30px]">
         Другие профессиональные услуги для вас
       </h2>
       <p className="xl:flex hidden text-[18px] leading-[21.6px] text-[#747373] w-[789px] text-center pb-10 pt-5">
