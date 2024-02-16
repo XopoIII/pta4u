@@ -3,7 +3,7 @@ import { ObjText } from './types'; // Замените на путь к ваше
 
 const Object: React.FC<{ objText: ObjText }> = ({ objText }) => {
   return (
-    <div className="px-5 pt-10 lg:max-w-[794px] lg:px-0">
+    <div className="px-5 pt-10 lg:max-w-[800px] lg:px-0">
       <h2 className="text-dark font-semibold text-sm leading-4 md:text-base  lg:text-2xl">
         {objText.name}
       </h2>
@@ -74,11 +74,15 @@ const Object: React.FC<{ objText: ObjText }> = ({ objText }) => {
                         className={`md:flex hidden text-dark text-[13px] leading-[15.6px] font-normal md:text-sm lg:text-base xl:leading-[19.2px] ${item.id === 3 ? 'xl:pt-3' : item.id === 4 ? 'xl:pt-4' : ''}`}>
                         {item.paragraph}
                       </p>
-                      <p
+                      {/* <p
                         className={`text-[14px] font-semibold text-dark leading-[16.7px] md:text-base`}>
                         {item?.paragraph2}
+                      </p> */}
+                      <p
+                        className={`text-[14px] font-semibold text-dark leading-[16.7px] md:text-base xl:pt-[2px]`}>
+                        {item?.paragraph2 && 'Важные примечания'}
                       </p>
-                      <div className="flex flex-col gap-3 pl-5">
+                      <div className="flex flex-col gap-3 pl-5 xl:ml-2 xl:gap-0">
                         {item.paragraphArr?.map((item, _) => (
                           <li
                             key={item.id}

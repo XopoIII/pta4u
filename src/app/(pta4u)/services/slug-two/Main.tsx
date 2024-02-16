@@ -53,12 +53,6 @@ function ProfServices() {
                 leading-[17px] mt-[32.5px] font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
         {active === true ? 'Скрыть' : '  Показать еще'}
       </button>
-      <button
-        onClick={handleActive}
-        className="hidden w-[200px] h-[50px] xl:flex justify-center items-center text-white text-[14px]
-                leading-[17px] mt-[32.5px] font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-        {active === true ? 'Включить Слайдер' : 'Включить Слайдер'}
-      </button>
     </div>
   );
 }

@@ -27,8 +27,8 @@ function mainFunc() {
         alt="service"
         className="hidden md:block rounded-[30px] xl:w-[588px] xl:h-[426px] xl:mt-[10px] xl:mr-2 xl:mb-12"
       />
-      <div className="flex justify-center items-center xl:items-start flex-col gap-3 xl:gap-0 md:max-w-[400px] xl:max-w-[510px] xl:pt-12 xl:pl-2">
-        <span className="hidden md:flex text-[#9E989B] text-[14px] left-0">
+      <div className="flex justify-center items-center xl:items-start flex-col gap-3 xl:gap-0 md:max-w-[400px] xl:max-w-[510px] xl:pt-[66px] xl:pl-2">
+        <span className="hidden md:flex text-[#9E989B] text-[14px] left-0 xl:absolute xl:top-16 xl:pl-2">
           Главная → Нотариальное заверение перевода
         </span>
         <h2 className="leading-[28.6px] text-[22px] font-semibold text-center xl:text-[45px] xl:leading-[54px] xl:text-start">

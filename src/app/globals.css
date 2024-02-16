@@ -33,3 +33,48 @@
   background-image: linear-gradient(to right, #f55751, #d83ca3);
   color: white;
 }
+
+.slider {
+  margin: 0 15px;
+  overflow: 'hidden';
+  padding: 0rem 0;
+}
+
+.slider img {
+  min-width: 384px;
+  height: 250px;
+  border-radius: 25px;
+}
+
+.react-multi-carousel-list {
+  padding: 0rem 0 1rem 0;
+}
+
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+}
+.custom-dot-list-style {
+  border: none;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgb(255, 68, 68) !important;
+  opacity: 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  position: absolute;
+  z-index: 50;
+  top: 105px !important;
+  right: -0px !important;
+}
+
+.react-multiple-carousel__arrow--left {
+  position: absolute;
+  z-index: 50;
+  top: 105px !important;
+  left: -0px !important;
+}

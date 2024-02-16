@@ -24,11 +24,11 @@ export default function ServicesOnePage() {
           alt="service"
           className="hidden md:block rounded-[30px] xl:w-[588px] xl:h-[426px]"
         />
-        <div className="flex justify-center items-center xl:items-start flex-col gap-3 xl:gap-0 md:max-w-[400px] xl:max-w-[510px] xl:pt-8">
-          <span className="hidden md:flex text-[#9E989B] text-[14px] left-0">
+        <div className="flex justify-center items-center xl:items-start flex-col gap-3 xl:gap-0 md:max-w-[400px] xl:max-w-[510px] xl:pt-8 relative">
+          <span className="hidden md:flex text-[#9E989B] text-[14px] left-0 xl:absolute xl:top-3">
             Главная → Письменный перевод
           </span>
-          <h2 className="leading-[28.6px] text-[22px] font-semibold text-center xl:text-[45px] xl:leading-[54px] xl:text-start">
+          <h2 className="leading-[28.6px] text-[22px] font-semibold text-center xl:text-[45px] xl:leading-[54px] xl:text-start xl:pt-5">
             Письменный перевод любой документации и текстов
           </h2>
           <p className="leading-[18.2px] text-[14px] xl:max-w-[442px] xl:leading-[31px] xl:pt-[29px] font-normal text-center xl:text-[18px] xl:text-start">
