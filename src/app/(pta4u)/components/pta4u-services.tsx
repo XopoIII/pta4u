@@ -1,4 +1,4 @@
-import { images } from 'next/dist/build/webpack/config/blocks/images';
+// import { images } from 'next/dist/build/webpack/config/blocks/images';
 import Link from 'next/link';
 import React from 'react';
 const services = [
@@ -12,25 +12,25 @@ const services = [
     title: 'Нотариальное заверение перевода',
     image: "bg-[url('/images/services/image1055.png')]",
     icon: '',
-    url: '/services/slug-two'
+    url: '/services/certified-translation'
   },
   {
     title: 'Апостиль для документов',
     image: "bg-[url('/images/services/Rectangle613.png')]",
     icon: '',
-    url: ''
+    url: '/services/apostille'
   },
   {
     title: 'Устный перевод — инструмент делового общения',
     image: "bg-[url('/images/services/image1057.png')]",
     icon: '',
-    url: ''
+    url: '/services/interpretation-translation'
   },
   {
     title: 'Консульская легализация',
     image: "bg-[url('/images/services/Rectangle614.png')]",
     icon: '',
-    url: ''
+    url: '/services/legalization'
   },
   {
     title: 'Истребование документов',
@@ -65,7 +65,7 @@ export default function Pta4uServices() {
             classes.push(service.image);
             return (
               <div key={i} className={'flex flex-col items-center'}>
-                <div className={classes.join(' ')} />
+                <Link href={service.url} className={classes.join(' ')}></Link>
                 <p
                   className={
                     'w-[336px] text-center mt-[16px] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[26px]'

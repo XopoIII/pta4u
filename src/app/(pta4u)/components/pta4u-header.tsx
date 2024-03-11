@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import logo from '../icons/logo_d.svg';
 import phone from '../icons/phone.svg';
@@ -36,8 +37,15 @@ export default function Pta4uHeader() {
       </nav>
       <div className={'flex gap-2 lg:gap-4 xl:gap-8 font-semibold'}>
         <div className={'hidden lg:flex items-center'}>
-          <Image src={phone} alt={'phone'} />
-          +7 902 480 0262
+          <Image
+            className={'cursor-pointer'}
+            onClick={() => window.open('https://wa.me/79024800262')}
+            src={phone}
+            alt={'phone'}
+          />
+          <span className={'cursor-pointer'} onClick={() => window.open('tel:+79024800262')}>
+            +7 902 480 0262
+          </span>
         </div>
         <Pta4uButton type={'outline'} size={'md'}>
           Заказать

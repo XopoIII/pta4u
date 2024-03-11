@@ -70,7 +70,7 @@ export default function ReviewsPage() {
                 Читать на 2ГИС
               </span>
             </div>
-            {arrComm.map((item, _) => (
+            {arrComm.map((item) => (
               <div
                 className="bg-[#F2F2F2] rounded-[30px] max-w-[792px] px-4 py-6 xl:h-[229px] xl:pl-12 xl:pt-8"
                 key={item.id}>

@@ -8,11 +8,11 @@ const footerMenu = [
     title: 'Услуги',
     mr: 72,
     items: [
-      { title: 'Нотариальное заверение', url: '/services/slug-two' },
-      { title: 'Письменный перевод', url: '/services/slug-one' },
-      { title: 'Апостиль для документов', url: '/services' },
-      { title: 'Консульская легализация', url: '/services' },
-      { title: 'Устный перевод', url: '/services' },
+      { title: 'Нотариальное заверение', url: '/services/certified-translation' },
+      { title: 'Письменный перевод', url: '/services/written-translation' },
+      { title: 'Апостиль для документов', url: '/services/apostille' },
+      { title: 'Консульская легализация', url: '/services/legalization' },
+      { title: 'Устный перевод', url: '/services/interpretation-translation' },
       { title: 'Истребование документов', url: '/services' }
     ]
   },
@@ -56,7 +56,7 @@ const footerMenu = [
 
 export default function Pta4uFooter() {
   return (
-    <div className="bg-white h-[70px] lg:h-[382px] container mx-auto px-5 lg:pt-[58px] flex gap-8">
+    <div className="bg-white container mx-auto px-5 lg:pt-[58px] flex gap-8 pb-[37px]">
       <div className={'hidden lg:block'}>
         <Image src={LogoSign} alt={'logo sign'} />
       </div>

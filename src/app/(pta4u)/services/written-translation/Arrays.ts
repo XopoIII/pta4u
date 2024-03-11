@@ -1,4 +1,4 @@
-import { ObjText } from '../slug-two/types';
+import { ObjText } from '../certified-translation/types';
 export const arrReplies = [
   {
     id: 1,

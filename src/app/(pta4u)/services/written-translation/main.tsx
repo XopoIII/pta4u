@@ -1,72 +1,27 @@
 'use client';
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { CiSearch } from 'react-icons/ci';
 import { IoIosArrowDown } from 'react-icons/io';
 import '../../../globals.css';
 import Pta4uQuickBuy from '../../components/pta4u-quick-buy';
 import Slider from './Slider';
 import arrPrav from './Arrays';
-import {
-  arrPhoto,
-  slice,
-  arrServices,
-  arrSecond,
-  arrLeng,
-  arrReplies,
-  sliceSecond
-} from './Arrays';
+import { arrSecond, arrLeng, sliceSecond } from './Arrays';
 import Pta4uReviews from '../../components/pta4u-reviews';
 
 function profServices() {
-  const [active, setActive] = useState(false);
-
-  const handleActive = useCallback(() => setActive((prev) => !prev), []);
-
   return (
-    <div className="px-5 bg-[#F2F2F2] mt-[49px] flex flex-col justify-center items-center pb-[36px] xl:pt-[73px] xl:pb-[40px]">
+    <div className="px-5 bg-[#F2F2F2] mt-[49px] flex flex-col justify-center items-center pt-[36px] pb-[36px] xl:pt-[73px] xl:pb-[40px]">
       <h2 className="text-dark text-[18px] leading-[21.6px] font-semibold text-center pt-[9px] px-6 md:text-xl xl:text-[30px] ">
         Другие профессиональные услуги для вас
       </h2>
-      <p className="xl:flex hidden text-[18px] leading-[21.6px] text-[#747373] w-[789px] text-center pb-10 pt-6 ">
+      <p className="flex text-[18px] leading-[21.6px] text-[#747373] max-w-[789px] text-center pb-10 pt-6 ">
         Список наших услуг включает в себя профессиональный письменный перевод текстов, документов и
         многое другое.
       </p>
-      <div className=" xl:flex hidden">
+      <div className="flex">
         <Slider />
       </div>
-      <div className="xl:hidden flex flex-wrap justify-center pt-5 w-full">
-        {active === true
-          ? arrServices.map((item, _) => (
-              <div key={item.id} className="flex flex-wrap justify-center items-center w-[500px]">
-                <img
-                  src={item.url}
-                  alt="logo"
-                  className=" shrink rounded-[30px] h-[170px] w-[335px] object-cover md:w-[450px] md:h-[220px] z-0"
-                />
-                <p className="text-dark text-[14px] leading-[19.6px] w-[250px] pt-[10px] font-normal text-center cursor-pointer  md:text-base md:w-fit">
-                  {item.title}
-                </p>
-              </div>
-            ))
-          : slice.map((item, _) => (
-              <div key={item.id} className="flex flex-col justify-center items-center w-[500px]">
-                <img
-                  src={item.url}
-                  alt="logo"
-                  className=" shrink rounded-[30px] h-[170px] w-[335px] object-cover md:w-[450px] md:h-[220px] z-0"
-                />
-                <p className="text-dark text-[14px] leading-[19.6px] w-[250px] pt-[10px] font-normal text-center cursor-pointer  md:text-base md:w-fit">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-      </div>
-      <button
-        onClick={handleActive}
-        className="xl:hidden w-[200px] h-[50px] flex justify-center items-center text-white text-[14px]
-                leading-[17px] mt-[32.5px] font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-        {active === true ? 'Скрыть' : '  Показать еще'}
-      </button>
     </div>
   );
 }
@@ -132,7 +87,7 @@ function firstTabs() {
         <p className="text-[10px] w-[36.5px] xl:w-0"></p>
       </div>
       <div className=" border-b-[1px] border-[#D0D0D0] ml-2 flex flex-col xl:pt-5">
-        {arrLeng.map((item, _) => (
+        {arrLeng.map((item) => (
           <div
             key={item.id}
             className={`div hover:bg-[#F2F2F2] xl:py-1 flex justify-between items-start ${item.id === Number(arrLeng.length) ? 'pb-[6px]' : ''} ${item.id !== arrLeng.length ? 'border-b-[1px] border-[#D0D0D0] border-separate border-dashed' : ''}`}>
@@ -155,7 +110,7 @@ function firstTabs() {
           </div>
         ))}
         <div className="hidden xl:flex flex-col">
-          {arrLeng.map((item, _) => (
+          {arrLeng.map((item) => (
             <div
               key={item.id}
               className={`div hover:bg-[#F2F2F2] xl:py-1 flex justify-between items-start ${item.id === Number(arrLeng.length) ? 'pb-[6px]' : ''} ${item.id !== arrLeng.length ? 'border-b-[1px] border-[#D0D0D0] border-separate border-dashed' : ''}`}>
@@ -177,7 +132,7 @@ function firstTabs() {
               </button>
             </div>
           ))}
-          {arrLeng.slice(11, 16).map((item, _) => (
+          {arrLeng.slice(11, 16).map((item) => (
             <div
               key={item.id}
               className={`div hover:bg-[#F2F2F2] xl:py-1 flex justify-between items-start ${item.id === Number(arrLeng.length) ? 'pb-[6px]' : ''} ${item.id !== arrLeng.length ? 'border-b-[1px] border-[#D0D0D0] border-separate border-dashed' : ''}`}>
@@ -207,8 +162,8 @@ function firstTabs() {
             Примечание
           </h2>
           <div className="ul flex mx-5 pt-[12px] flex-col gap-4 xl:pt-6 xl:mx-0">
-            {arrPrav.map((item, _) => (
-              <div className="flex justify-center items-start gap-4">
+            {arrPrav.map((item, i) => (
+              <div key={i} className="flex justify-center items-start gap-4">
                 <div className="bg-[#D9D9D9] w-2 h-2 rounded-full lg:mt-[6px]" />
                 <p
                   key={item.id}
@@ -228,7 +183,7 @@ function secondTabs() {
   return (
     <>
       <div className="hidden md:flex pt-[30px] px-5 xl:px-0 flex-col gap-8 xl:pt-8">
-        {arrSecond.map((item, _) => (
+        {arrSecond.map((item) => (
           <div
             key={item.id}
             className={`flex justify-between ${item.id !== arrSecond.length ? 'border-b-[1px] border-[#D0D0D0] border-separate border-dashed' : ''} pb-3  xl:pb-8 ${item.id === arrSecond.length ? 'xl:pb-[6px] ' : ''}`}>
@@ -248,7 +203,7 @@ function secondTabs() {
         ))}
       </div>
       <div className="md:hidden flex pt-[30px] px-5 flex-col gap-6">
-        {sliceSecond.map((item, _) => (
+        {sliceSecond.map((item) => (
           <div
             key={item.id}
             className={`flex flex-wrap justify-between ${item.id !== 4 ? 'border-b-[1px] border-[#D0D0D0] border-separate border-dashed' : ''} pb-3`}>

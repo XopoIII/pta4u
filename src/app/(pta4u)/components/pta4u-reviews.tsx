@@ -25,7 +25,10 @@ import React from 'react';
 export default function Pta4uReviews() {
   return (
     <div className={'container h-full mx-auto px-5 flex flex-col items-center'}>
-      <p className={'text-center text-[14px] leading-[16px] lg:text-[18px] lg:leading-[22px]'}>
+      <p
+        className={
+          'text-center text-[14px] leading-[16px] lg:text-[18px] lg:leading-[22px] pb-[30px]'
+        }>
         <span className={'text-[#F55751] font-semibold'}>Более 20</span> лучших компаний выбирают
         сервис Polyglot
       </p>
@@ -41,7 +44,18 @@ export default function Pta4uReviews() {
             return (
               <SwiperSlide key={i}>
                 <div className="relative" style={{ width: '138px', height: '128px' }}>
-                  <Image className="object-scale-down" fill={true} src={image} alt={'alt'} />
+                  <Image
+                    className="object-scale-down"
+                    src={image}
+                    alt={'alt'}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto'
+                    }}
+                    width={138}
+                    height={128}
+                  />
                 </div>
               </SwiperSlide>
             );
@@ -55,9 +69,9 @@ export default function Pta4uReviews() {
         className={
           'mt-[20px] text-[14px] leading-[16px] lg:text-[24px] lg:leading-[36px] max-w-[760px] text-center'
         }>
-        "Периодически перевожу различные документы, как личные так и по работе. Любезные девушки ,
-        всегда подскажут как лучше сделать и где можно сэкономить. Качество перевода всегда всегда
-        на высоте"
+        &quot;Периодически перевожу различные документы, как личные так и по работе. Любезные
+        девушки , всегда подскажут как лучше сделать и где можно сэкономить. Качество перевода
+        всегда всегда на высоте&quot;
       </p>
       <div className={'mt-[16px] lg:mt-[20px]'}>
         <Image src={Stars} alt={'img'} />

@@ -1,3 +1,4 @@
+import { IPaymentsLinks } from '../types';
 import Pta4uPaymentsItem from './pta4u-payments-item';
 import React from 'react';
 const payments: Array<IPaymentsLinks> = [

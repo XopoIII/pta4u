@@ -1,6 +1,7 @@
 import Pta4uHeroSlider from './pta4u-hero-slider';
 import Pta4uHeroForm from './pta4u-hero-form';
 import React from 'react';
+import { IHeroSlide } from '../types';
 const slides: IHeroSlide[] = [
   {
     title:

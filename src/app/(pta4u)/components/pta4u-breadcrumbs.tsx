@@ -2,6 +2,7 @@
 import { useBreadcrumbsStore } from '../../../store/breadcrumbs';
 import Link from 'next/link';
 import React from 'react';
+import { IBreadcrumbs } from '../types';
 interface IBreadLinkProps {
   item: IBreadcrumbs;
   arrow?: boolean;

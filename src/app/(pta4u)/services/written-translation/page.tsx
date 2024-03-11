@@ -14,13 +14,13 @@ export default function ServicesOnePage() {
       <div className="px-5 flex flex-col gap-[9px] xl:gap-[112px] xl:px-0 items-center justify-center md:flex-row-reverse relative xl:max-w-[1200px]">
         <div className="md:hidden flex max-h-[171px] max-w-[335px] overflow-hidden rounded-[30px] md:w-[400px] md:h-[200px]">
           <img
-            src="../images/services/image1056.png"
+            src="/images/services/image1056.png"
             alt="service"
             className="rounded-[30px] max-w-[300px] scale-[130%]"
           />
         </div>
         <img
-          src="../images/services/image1056.png"
+          src="/images/services/image1056.png"
           alt="service"
           className="hidden md:block rounded-[30px] xl:w-[588px] xl:h-[426px]"
         />

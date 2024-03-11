@@ -4,6 +4,8 @@ import SetBreadcrumbs from '../../../store/setBreadcrumbs';
 import Pta4uPaymentForm from '../components/pta4u-payment-form';
 import Pta4uForYou from '../components/pta4u-for-you';
 import React from 'react';
+import { IBreadcrumbs } from '../types';
+
 export const metadata: Metadata = {
   title: 'Polyglot - translation agency for you | payment',
   description: 'Polyglot - translation agency for you'
