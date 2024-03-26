@@ -14,6 +14,10 @@
   width: auto !important;
 }
 
+.reviews-slider .swiper-slide .relative {
+  display: flex;
+}
+
 .pta4u-hero-slider .swiper-pagination-bullet {
   border: 2px solid rgb(255, 255, 255);
   background-color: transparent;
