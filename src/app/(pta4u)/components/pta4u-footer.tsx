@@ -1,6 +1,3 @@
-import LogoSign from '../icons/logo_sign.svg';
-import Social from '../icons/social-wtf.svg';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 const footerMenu = [
@@ -58,7 +55,7 @@ export default function Pta4uFooter() {
   return (
     <div className="bg-white container mx-auto px-5 lg:pt-[58px] flex gap-8 pb-[37px]">
       <div className={'hidden lg:block'}>
-        <Image src={LogoSign} alt={'logo sign'} />
+        <img src={'/images/icons/logo_sign.svg'} alt={'logo sign'} />
       </div>
       <div className={'hidden lg:flex flex-col flex-1'}>
         <div className={'flex justify-between'}>
@@ -91,7 +88,7 @@ export default function Pta4uFooter() {
               <Link href={'/'}>Terms of Use</Link>
             </div>
           </div>
-          <Image src={Social} alt={'social'} />
+          <img src={'/images/icons/social-wtf.svg'} alt={'social'} />
         </div>
       </div>
       <div className={'lg:hidden text-[#747373] text-[13px] py-[24px]'}>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Pta4uPaymentF from './payment-form/pta4u-payment-f';
 import Pta4uPaymentU from './payment-form/pta4u-payment-u';
 
-const tabs = {
+const tabs: any = {
   1: <Pta4uPaymentF />,
   2: <Pta4uPaymentU />
 };

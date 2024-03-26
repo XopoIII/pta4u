@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import React from 'react';
+import { IPaymentsLinks } from '../types';
 interface IProps {
   payment: IPaymentsLinks;
 }
@@ -11,7 +11,7 @@ export default function Pta4uPaymentsItem({ payment }: IProps) {
         'lg:w-[282px] h-[50px] text-[14px] lg:text-[16px] bg-white rounded-lg flex justify-center items-center gap-3'
       }>
       {payment.icon && (
-        <Image
+        <img
           src={payment.icon}
           alt={payment.icon}
           width={22}

@@ -1,9 +1,6 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import Stars from '../icons/stars.svg';
-import Star from '../icons/star.svg';
-import Image from 'next/image';
 import Pta4uButton from './pta4u-button';
 const images = [
   '/images/sponsors/first.png',
@@ -44,7 +41,7 @@ export default function Pta4uReviews() {
             return (
               <SwiperSlide key={i}>
                 <div className="relative" style={{ width: '138px', height: '128px' }}>
-                  <Image
+                  <img
                     className="object-scale-down"
                     src={image}
                     alt={'alt'}
@@ -74,7 +71,7 @@ export default function Pta4uReviews() {
         всегда всегда на высоте&quot;
       </p>
       <div className={'mt-[16px] lg:mt-[20px]'}>
-        <Image src={Stars} alt={'img'} />
+        <img src={'/images/icons/stars.svg'} alt={'img'} />
       </div>
       <p className={'mt-[10px] text-[14px] lg:text-[18px] font-semibold'}>Джовани Селезнев</p>
       <p className={'mt-[4px] text-[13px] lg:text-[16px] italic font-serif text-[#747373]'}>
@@ -85,7 +82,7 @@ export default function Pta4uReviews() {
           <div className={'text-inherit flex gap-[7px]'}>
             Яндекс отзывы:
             <div className={'text-inherit flex gap-[4px]'}>
-              <Image src={Star} alt={'img'} />
+              <img src={'/images/icons/star.svg'} alt={'img'} />
               4.7
             </div>
           </div>
@@ -94,7 +91,7 @@ export default function Pta4uReviews() {
           <div className={'text-inherit flex gap-[7px]'}>
             2ГИС отзывы:
             <div className={'text-inherit flex gap-[4px]'}>
-              <Image src={Star} alt={'img'} />
+              <img src={'/images/icons/star.svg'} alt={'img'} />
               4.9
             </div>
           </div>

@@ -1,5 +1,3 @@
-import { ObjText } from '../certified-translation/types';
-
 export const arrCost = [
   {
     id: 1,

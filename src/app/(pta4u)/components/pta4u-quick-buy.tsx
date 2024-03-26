@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 const items = [
   { title: 'В офисе компании', icon: 'office.svg', color: 'bg-qb-green', url: '', w: 58, h: 38 },
@@ -43,7 +42,7 @@ export default function Pta4uQuickBuy() {
           return (
             <div key={i} className={classes.join(' ')}>
               <span className={'order-2 lg:order-1 text-[14px] lg:text-[16xp]'}>{item.title}</span>
-              <Image
+              <img
                 className={'order-1 lg:order-2 mr-[16px] lg:mr-0'}
                 src={'/icons/qb/' + item.icon}
                 alt={'icon'}

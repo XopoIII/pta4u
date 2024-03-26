@@ -1,7 +1,4 @@
 'use client';
-import Image from 'next/image';
-import logo from '../icons/logo_d.svg';
-import phone from '../icons/phone.svg';
 import Link from 'next/link';
 import Pta4uButton from './pta4u-button';
 import React from 'react';
@@ -22,7 +19,11 @@ export default function Pta4uHeader() {
         'gap-6 lg:gap-10 xl:gap-20 px-5 justify-between lg:justify-start'
       }>
       <Link href={'/'}>
-        <Image className={'h-[30px] w-[78px] lg:h-[48px] lg:w-[123px]'} src={logo} alt={'logo'} />
+        <img
+          className={'h-[30px] w-[78px] lg:h-[48px] lg:w-[123px]'}
+          src={'/images/icons/logo_d.svg'}
+          alt={'logo'}
+        />
       </Link>
       <nav className={'hidden lg:block flex-1'}>
         <ul className={'flex justify-start gap-5'}>
@@ -37,10 +38,10 @@ export default function Pta4uHeader() {
       </nav>
       <div className={'flex gap-2 lg:gap-4 xl:gap-8 font-semibold'}>
         <div className={'hidden lg:flex items-center'}>
-          <Image
+          <img
             className={'cursor-pointer'}
             onClick={() => window.open('https://wa.me/79024800262')}
-            src={phone}
+            src={'/images/icons/phone.svg'}
             alt={'phone'}
           />
           <span className={'cursor-pointer'} onClick={() => window.open('tel:+79024800262')}>

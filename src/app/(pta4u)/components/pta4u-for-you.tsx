@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 const steps = [
   {
@@ -48,7 +47,7 @@ export default function Pta4uForYou() {
           return (
             <div key={i} className="max-w-[158px] lg:max-w-[384px]">
               <div className="w-[158px] lg:w-[384px] h-[116px] lg:h-[226px] relative rounded-[20px] lg:rounded-[30px] truncate">
-                <Image src={step.image} alt={'img'} fill={true} objectFit="cover" />
+                <img src={step.image} alt={'img'} />
               </div>
               <p className="mt-[7px] lg:mt-[20px] text-[13px] leading-[16px] lg:text-[18px] lg:leading-[22px] text-center">
                 {step.title}

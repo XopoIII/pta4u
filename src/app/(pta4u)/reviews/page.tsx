@@ -8,8 +8,6 @@ export const metadata: Metadata = {
   title: 'Polyglot - translation agency for you | reviews',
   description: 'Polyglot - translation agency for you'
 };
-import Stars from '../icons/stars.svg';
-import Image from 'next/image';
 import Main from './Main';
 const arrComm = [
   {
@@ -82,7 +80,7 @@ export default function ReviewsPage() {
                     <span className="text-[#747373] text-sm font-normal leading-[16.8px]">
                       {item.date}
                     </span>
-                    <Image src={Stars} alt={'img'} className=" scale-75" />
+                    <img src={'/images/icons/stars.svg'} alt={'img'} className=" scale-75" />
                   </div>
                 </div>
                 <p className="text-dark text-[13px] font-normal leading-[15.6px] pt-[17px] md:text-lg">

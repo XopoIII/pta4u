@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 export default function Pta4uPaymentU() {
   return (
@@ -49,7 +48,7 @@ export default function Pta4uPaymentU() {
         </div>
         <div className={'w-[260px] bg-white rounded-[30px] p-[20px]'}>
           <div className={'relative w-[217px] h-[217px]'}>
-            <Image src={'/images/payment/image1028.png'} alt={'img'} fill={true} />
+            <img src={'/images/payment/image1028.png'} alt={'img'} />
           </div>
           <p className={'text-[#747373] text-[14px] leading-[20px] text-center mt-[13px]'}>
             Чтобы открыть платеж, с <b>заполненными</b> реквизитами, используйте этот QR
@@ -100,7 +99,7 @@ export default function Pta4uPaymentU() {
           className={'mt-[29px] bg-[#F2F2F2] rounded-[20px] p-[30px] flex flex-col items-center'}>
           <div className={'bg-white rounded-[30px] p-[14px]'}>
             <div className={'relative w-[145px] h-[145px]'}>
-              <Image src={'/images/payment/image1028.png'} alt={'img'} fill={true} />
+              <img src={'/images/payment/image1028.png'} alt={'img'} />
             </div>
           </div>
           <p className={'mt-[19px] text-[14px] text-center text-[#747373]'}>

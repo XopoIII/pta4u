@@ -2,11 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import SetBreadcrumbs from '../../../store/setBreadcrumbs';
 import Pta4uBreadcrumbs from '../components/pta4u-breadcrumbs';
-import Image from 'next/image';
-import Recircle from '../icons/recycle.svg';
-import Doc from '../icons/doc.svg';
-import Smile from '../icons/smile.svg';
-import Users from '../icons/users.svg';
 import Pta4uReviews from '../components/pta4u-reviews';
 import Pta4uQuickBuy from '../components/pta4u-quick-buy';
 import Pta4uPayments from '../components/pta4u-payments';
@@ -47,13 +42,13 @@ export default function AboutPage() {
         <div className={'mt-[30px]'}>
           <div>
             <div className={'h-[453px] lg:h-[500px] w-full relative rounded-[30px] truncate'}>
-              <Image src={'/images/bg-1.png'} alt={'img'} fill={true} objectFit={'cover'} />
+              <img src={'/images/bg-1.png'} alt={'img'} />
               <div
                 className="bg-[#3D3038]/[0.4] absolute z-30 top-0 left-0 w-full h-full
               p-[18px] lg:py-[34px] lg:px-[80px] flex flex-col justify-end">
                 <div className="flex gap-[12px] lg:gap-[20px] justify-between flex-wrap lg:flex-nowrap">
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
-                    <Image src={Recircle} alt={'img'} />
+                    <img src={'/images/icons/recycle.svg'} alt={'img'} />
                     <div>
                       <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
                         45
@@ -64,7 +59,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
-                    <Image src={Doc} alt={'img'} />
+                    <img src={'/images/icons/doc.svg'} alt={'img'} />
                     <div>
                       <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
                         1 200 000
@@ -77,7 +72,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
-                    <Image src={Smile} alt={'img'} />
+                    <img src={'/images/icons/smile.svg'} alt={'img'} />
                     <div>
                       <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
                         Более 1000
@@ -90,7 +85,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
-                    <Image src={Users} alt={'img'} />
+                    <img src={'/images/icons/users.svg'} alt={'img'} />
                     <div>
                       <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
                         50
@@ -123,22 +118,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="hidden lg:block w-[585px] h-[361px] rounded-[30px] relative truncate">
-              <Image
-                src={'/images/company/image1035.png'}
-                alt={'img'}
-                fill={true}
-                objectFit="cover"
-              />
+              <img src={'/images/company/image1035.png'} alt={'img'} />
             </div>
           </div>
           <div className="flex gap-[81px] items-center">
             <div className="hidden lg:block w-[585px] h-[361px] rounded-[30px] relative truncate">
-              <Image
-                src={'/images/company/image1063.png'}
-                alt={'img'}
-                fill={true}
-                objectFit="cover"
-              />
+              <img src={'/images/company/image1063.png'} alt={'img'} />
             </div>
             <div>
               <h1 className="text-[14px] leading-[16px] lg:text-[30px] lg:leading-[36px] font-semibold">

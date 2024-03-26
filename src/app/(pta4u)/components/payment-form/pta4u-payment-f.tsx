@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import Image from 'next/image';
-
-import Pta4uButton from '../pta4u-button';
 
 export default function Pta4uPaymentF() {
   const url =
@@ -26,7 +23,7 @@ export default function Pta4uPaymentF() {
         }>
         <div className={'bg-white rounded-[30px] p-[14px] lg:p-[20px]'}>
           <div className={'relative lg:w-[217px] lg:h-[217px] w-[145px] h-[145px]'}>
-            <Image src={'/images/payment/image1029.png'} alt={'img'} fill={true} />
+            <img src={'/images/payment/image1029.png'} alt={'img'} />
           </div>
         </div>
         <p
@@ -45,7 +42,7 @@ export default function Pta4uPaymentF() {
             className={
               'relative w-[130px] lg:w-[180px] h-[16px] lg:h-[23px] mt-[30px] lg:mt-[45px] mx-auto'
             }>
-            <Image src={'/images/payment/image1069.png'} alt={'img'} fill={true} />
+            <img src={'/images/payment/image1069.png'} alt={'img'} />
           </div>
           <p
             className={

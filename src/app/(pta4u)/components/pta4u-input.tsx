@@ -1,9 +1,8 @@
-import { ChangeEvent } from 'react';
 import React from 'react';
 interface IProps {
   placeholder?: string;
   value?: string;
-  onChange?: (evt: ChangeEvent) => void;
+  onChange?: () => void;
 }
 export default function Pta4uInput({ value, placeholder, onChange }: IProps) {
   return (

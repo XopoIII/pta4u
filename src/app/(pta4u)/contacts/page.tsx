@@ -2,9 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import SetBreadcrumbs from '../../../store/setBreadcrumbs';
 import Pta4uBreadcrumbs from '../components/pta4u-breadcrumbs';
-import Image from 'next/image';
-import wp from '../icons/wp.svg';
-import mail from '../icons/mail.svg';
 import Link from 'next/link';
 import Pta4uReviews from '../components/pta4u-reviews';
 import Pta4uQuickBuy from '../components/pta4u-quick-buy';
@@ -56,7 +53,7 @@ export default function AboutPage() {
                     href="https://wa.me/79024800262"
                     target="_blank">
                     <span className={'w-[26px] h-[26px] bg-[#FFFFFF] p-[4px] rounded-[6px]'}>
-                      <Image src={wp} alt={'wp'} />
+                      <img src={'/images/icons/wp.svg'} alt={'wp'} />
                     </span>
                     Связаться по WhatsApp
                   </Link>
@@ -68,7 +65,7 @@ export default function AboutPage() {
                 <div className={'font-semibold text-[#F55751]'}>
                   <Link className={'flex gap-[9px]'} href="mailto:info@pta4u.ru" target="_blank">
                     <span className={'w-[26px] h-[26px] bg-[#FFFFFF] p-[4px] rounded-[6px]'}>
-                      <Image src={mail} alt={'mail'} />
+                      <img src={'/images/icons/mail.svg'} alt={'mail'} />
                     </span>
                     Отправить сообщение
                   </Link>

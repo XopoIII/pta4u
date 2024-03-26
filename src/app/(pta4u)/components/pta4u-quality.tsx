@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 export default function Pta4uQuality() {
   return (
@@ -20,12 +19,7 @@ export default function Pta4uQuality() {
         <div className={'flex flex-col lg:flex-row gap-6 mt-[22px] lg:mt-[44px] w-full'}>
           <div className={'bg-[#F2F2F2] rounded-[30px] p-[40px] flex-1'}>
             <div className={'flex justify-end'}>
-              <Image
-                src={'/images/quality/Rectangle 778.png'}
-                alt={'img'}
-                width={288}
-                height={185}
-              />
+              <img src={'/images/quality/Rectangle 778.png'} alt={'img'} width={288} height={185} />
             </div>
             <div className={'mt-[36px] lg:p-5'}>
               <h3
@@ -43,7 +37,7 @@ export default function Pta4uQuality() {
           </div>
           <div className={'bg-[#F2F2F2] rounded-[30px] p-[40px] flex-1'}>
             <div className={'flex justify-end'}>
-              <Image
+              <img
                 className={'rounded-[20px]'}
                 src={'/images/quality/image 1062.png'}
                 alt={'img'}

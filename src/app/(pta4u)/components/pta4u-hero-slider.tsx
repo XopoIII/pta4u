@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import React from 'react';
-import Image from 'next/image';
 import { IHeroSlide } from '../types';
 
 interface IProps {
@@ -47,7 +46,7 @@ export default function Pta4uHeroSlider({ slides }: IProps) {
                     </p>
                   </div>
                 </div>
-                <Image className="object-cover" src={slide.image} alt={'img'} fill={true} />
+                <img className="object-cover" src={slide.image} alt={'img'} />
               </div>
             </SwiperSlide>
           );
