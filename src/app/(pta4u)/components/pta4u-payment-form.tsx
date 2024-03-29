@@ -1,6 +1,5 @@
 'use client';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Pta4uPaymentF from './payment-form/pta4u-payment-f';
 import Pta4uPaymentU from './payment-form/pta4u-payment-u';
 
