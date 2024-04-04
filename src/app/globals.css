@@ -86,10 +86,10 @@
 .formFL img {
   display: none;
 }
-.formFL.shadows,
+/* .formFL.shadows,
 .formM.shadows,
 .formS.shadows {
-}
+} */
 .hamburger-menu {
   position: absolute;
   top: 50px;
@@ -99,4 +99,7 @@
   background: white;
   z-index: 999;
   padding: 40px;
+}
+.object-cover {
+  width: 100%;
 }

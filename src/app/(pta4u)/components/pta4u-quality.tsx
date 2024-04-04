@@ -13,8 +13,8 @@ export default function Pta4uQuality() {
           className={
             'text-[14px] leading-[18px] lg:text-[18px] lg:leading-5 text-[#747373] text-center max-w-[840px] mt-[20px]'
           }>
-          По результатам пороса 2022г, более 3000 постоянных клиентов выбирают Полиглот и ценят
-          сотрудничество с нами за качество сервиса и качество предоставляемых услуг.
+          По результатам опроса более 3000 постоянных клиентов выбирают Полиглот за качество
+          предоставляемых услуг, высокий уровень сервиса и строгое соблюдение сроков.
         </p>
         <div className={'flex flex-col lg:flex-row gap-6 mt-[22px] lg:mt-[44px] w-full'}>
           <div className={'bg-[#F2F2F2] rounded-[30px] p-[40px] flex-1'}>
