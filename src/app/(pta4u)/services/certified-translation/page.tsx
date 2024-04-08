@@ -1,4 +1,5 @@
 import { Metadata } from 'next/types';
+import Link from 'next/link';
 import React from 'react';
 import { arrCost } from '../written-translation/Arrays';
 import Object from './Object';
@@ -40,11 +41,13 @@ function mainFunc() {
           печатью бюро переводов. Для заверения уже имеющегося у Вас перевода необходимо сначала
           заказать услугу проверки его правильности.
         </p>
-        <button
-          className="w-[200px] h-[50px] flex xl:mt-[45px] justify-center items-center text-white text-[14px]
+        <Link href={'/contacts'}>
+          <button
+            className="w-[200px] h-[50px] flex xl:mt-[45px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px] xl:mb-12">
-          Сделать расчет
-        </button>
+            Сделать расчет
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -70,9 +73,11 @@ export default function ServicesTowPage() {
                 <p className=" text-lg text-dark leading-[21px] font-semibold pt-1 lg:text-2xl ">
                   {item.cost} руб.
                 </p>
-                <button className="mt-4 text-[#F55751]  underline underline-offset-4">
-                  Заказать
-                </button>
+                <Link href={'/contacts'}>
+                  <button className="mt-4 text-[#F55751]  underline underline-offset-4">
+                    Заказать
+                  </button>
+                </Link>
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { Metadata } from 'next/types';
 import React from 'react';
 import { arrCost } from './Arrays';
+import Link from 'next/link';
 import ProfServices from './Main';
 import Pta4uReviews from '../../components/pta4u-reviews';
 import Pta4uQuickBuy from '../../components/pta4u-quick-buy';
@@ -38,11 +39,13 @@ function mainFunc() {
             Для консульской легализации документ должен пройти нотариальную контору, Министерство
             юстиции РФ, КД МИД России и консульство государства, где он будет использоваться.
           </p>
-          <button
-            className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
+          <Link href={'/contacts'}>
+            <button
+              className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-            Сделать расчет
-          </button>
+              Сделать расчет
+            </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -69,9 +72,11 @@ export default function ServicesApostillePage() {
                 <p className=" text-lg text-dark leading-[21px] font-semibold pt-1 lg:text-2xl ">
                   {item.cost} руб.
                 </p>
-                <button className="mt-4 text-[#F55751]  underline underline-offset-4">
-                  Заказать
-                </button>
+                <Link href={'/contacts'}>
+                  <button className="mt-4 text-[#F55751]  underline underline-offset-4">
+                    Заказать
+                  </button>
+                </Link>
               </div>
             ))}
           </div>

@@ -1,4 +1,5 @@
 import { IPaymentsLinks } from '../types';
+import Link from 'next/link';
 import Pta4uPaymentsItem from './pta4u-payments-item';
 import React from 'react';
 const payments: Array<IPaymentsLinks> = [
@@ -16,7 +17,11 @@ export default function Pta4uPayments() {
           <h1 className={'text-[18px] font-semibold leading-5'}>Удобные способы оплаты</h1>
           <div className={'grid grid-cols-2 lg:flex gap-6 flex-wrap justify-center w-full'}>
             {payments.map((payment) => {
-              return <Pta4uPaymentsItem key={payment.title} payment={payment} />;
+              return (
+                <Link key={`${payment.title}-link`} href={'/payment'}>
+                  <Pta4uPaymentsItem key={payment.title} payment={payment} />
+                </Link>
+              );
             })}
           </div>
         </div>

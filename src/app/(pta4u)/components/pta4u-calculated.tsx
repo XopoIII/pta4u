@@ -1,4 +1,5 @@
 import Pta4uButton from './pta4u-button';
+import Link from 'next/link';
 import React from 'react';
 export default function Pta4uCalculated() {
   return (
@@ -18,9 +19,11 @@ export default function Pta4uCalculated() {
           }>
           PTA – надежный оператор рынка переводческих услуг
         </h1>
-        <Pta4uButton className={'w-[276px] lg:w-[343px] mt-[68px]'}>
-          Рассчитать стоимость перевода
-        </Pta4uButton>
+        <Link href={'/contacts'}>
+          <Pta4uButton className={'w-[276px] lg:w-[343px] mt-[68px]'}>
+            Рассчитать стоимость перевода
+          </Pta4uButton>
+        </Link>
       </div>
     </div>
   );

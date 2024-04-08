@@ -100,9 +100,11 @@ export default function Pta4uHeader() {
             +7 902 480 0262
           </span>
         </div>
-        <Pta4uButton type={'outline'} size={'md'}>
-          Заказать
-        </Pta4uButton>
+        <Link href={'/contacts'}>
+          <Pta4uButton type={'outline'} size={'md'}>
+            Заказать
+          </Pta4uButton>
+        </Link>
         <GiHamburgerMenu
           className={`${isItOpen ? 'hidden' : 'block'} ml-3 text-2xl lg:hidden`}
           onClick={() => setIsItOpen(true)}

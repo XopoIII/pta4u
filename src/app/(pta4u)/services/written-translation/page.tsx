@@ -1,5 +1,6 @@
 import { Metadata } from 'next/types';
 import Pta4uPayments from '../../components/pta4u-payments';
+import Link from 'next/link';
 import Main from './main';
 import React from 'react';
 
@@ -35,11 +36,13 @@ export default function ServicesOnePage() {
             Переведём любые документы: от свидетельства о рождении до юридических документов и
             технических инструкций.
           </p>
-          <button
-            className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
+          <Link href={'/contacts'}>
+            <button
+              className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-            Сделать расчет
-          </button>
+              Сделать расчет
+            </button>
+          </Link>
         </div>
       </div>
       <Main />

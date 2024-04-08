@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { CiSearch } from 'react-icons/ci';
 import { IoIosArrowDown } from 'react-icons/io';
 import '../../../globals.css';
@@ -104,9 +105,11 @@ function firstTabs() {
             <button className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3 mr-2 px-1 md:mr-0">
               Заказ
             </button>
-            <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
-              Заказать
-            </button>
+            <Link href={'/contacts'}>
+              <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
+                Заказать
+              </button>
+            </Link>
           </div>
         ))}
         <div className="hidden xl:flex flex-col">
@@ -127,9 +130,11 @@ function firstTabs() {
               <button className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3">
                 Заказ
               </button>
-              <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
-                Заказать
-              </button>
+              <Link href={'/contacts'}>
+                <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
+                  Заказать
+                </button>
+              </Link>
             </div>
           ))}
           {arrLeng.slice(11, 16).map((item) => (
@@ -149,9 +154,11 @@ function firstTabs() {
               <button className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3">
                 Заказ
               </button>
-              <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
-                Заказать
-              </button>
+              <Link href={'/contacts'}>
+                <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
+                  Заказать
+                </button>
+              </Link>
             </div>
           ))}
         </div>
@@ -194,10 +201,12 @@ function secondTabs() {
               <p className="text-dark text-[13px] font-normal leading-[15.6px] md:text-[14px] xl:text-base xl:leading-[19.2px]">
                 {item.title}
               </p>
-              <button
-                className={`${item.id !== arrSecond.length - 2 ? 'text-[#F55751] ' : 'text-dark'} pt-[10px] underline underline-offset-4 xl:mt-1`}>
-                Заказать
-              </button>
+              <Link href={'/contacts'}>
+                <button
+                  className={`${item.id !== arrSecond.length - 2 ? 'text-[#F55751] ' : 'text-dark'} pt-[10px] underline underline-offset-4 xl:mt-1`}>
+                  Заказать
+                </button>
+              </Link>
             </div>
           </div>
         ))}
@@ -210,10 +219,12 @@ function secondTabs() {
             <h2 className="text-dark text-[14px] font-semibold leading-[16.8px]">{item.name}</h2>
             <div className="pt-3">
               <p className="text-dark text-[13px] font-normal leading-[15.6px]">{item.title}</p>
-              <button
-                className={`${item.id !== arrSecond.length - 2 ? 'text-[#F55751]' : 'text-dark'} pt-[10px]`}>
-                Заказать
-              </button>
+              <Link href={'/contacts'}>
+                <button
+                  className={`${item.id !== arrSecond.length - 2 ? 'text-[#F55751]' : 'text-dark'} pt-[10px]`}>
+                  Заказать
+                </button>
+              </Link>
             </div>
           </div>
         ))}
