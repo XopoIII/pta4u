@@ -106,7 +106,13 @@ function firstTabs() {
               Заказ
             </button>
             <Link href={'/contacts'}>
-              <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
+              <button
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/79024800262?text=Здравствуйте,%20интересует%20Письменный перевод ${item.title}.`
+                  )
+                }
+                className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
                 Заказать
               </button>
             </Link>
@@ -130,11 +136,15 @@ function firstTabs() {
               <button className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3">
                 Заказ
               </button>
-              <Link href={'/contacts'}>
-                <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
-                  Заказать
-                </button>
-              </Link>
+              <button
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/79024800262?text=Здравствуйте,%20интересует%20Письменный перевод ${item.title}.`
+                  )
+                }
+                className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
+                Заказать
+              </button>
             </div>
           ))}
           {arrLeng.slice(11, 16).map((item) => (
@@ -151,14 +161,24 @@ function firstTabs() {
               <p className="text-[13px] text-dark leading-[23px] md:text-base">
                 от {item.another} руб.
               </p>
-              <button className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3">
+              <button
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/79024800262?text=Здравствуйте,%20интересует%20Письменный перевод ${item.title}.`
+                  )
+                }
+                className="xl:hidden rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base  md:px-3">
                 Заказ
               </button>
-              <Link href={'/contacts'}>
-                <button className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
-                  Заказать
-                </button>
-              </Link>
+              <button
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/79024800262?text=Здравствуйте,%20интересует%20Письменный перевод ${item.title}.`
+                  )
+                }
+                className="hidden xl:flex rounded-[25px] text-[#747373] text-[13px] leading-[23px] md:text-base px-4 hover:text-white">
+                Заказать
+              </button>
             </div>
           ))}
         </div>

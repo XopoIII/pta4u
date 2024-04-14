@@ -41,13 +41,12 @@ function mainFunc() {
           печатью бюро переводов. Для заверения уже имеющегося у Вас перевода необходимо сначала
           заказать услугу проверки его правильности.
         </p>
-        <Link href={'/contacts'}>
-          <button
-            className="w-[200px] h-[50px] flex xl:mt-[45px] justify-center items-center text-white text-[14px]
+        <button
+          onClick={() => window.open(`https://wa.me/79024800262?text=Здравствуйте.`)}
+          className="w-[200px] h-[50px] flex xl:mt-[45px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px] xl:mb-12">
-            Сделать расчет
-          </button>
-        </Link>
+          Сделать расчет
+        </button>
       </div>
     </div>
   );

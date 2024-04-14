@@ -1,5 +1,4 @@
 import Pta4uInput from './pta4u-input';
-import Link from 'next/link';
 import Pta4uButton from './pta4u-button';
 interface IProps {
   className?: string;
@@ -18,10 +17,10 @@ export default function Pta4uHeroForm({ className }: IProps) {
         <Pta4uInput placeholder={'Электронная почта'} />
         <Pta4uInput placeholder={'Телефон'} />
       </div>
-      <div className={'mt-[10px] flex justify-center'}>
-        <Link href={'/contacts'}>
-          <Pta4uButton>Сделать расчет</Pta4uButton>
-        </Link>
+      <div
+        className={'mt-[10px] flex justify-center'}
+        onClick={() => window.open(`https://wa.me/79024800262?text=Здравствуйте.`)}>
+        <Pta4uButton>Сделать расчет</Pta4uButton>
       </div>
       <p className={'mt-[36px] text-[12px] leading-[16px] text-[#9E989B] text-center'}>
         Нажимая кнопку «Сделать расчет» вы соглашаетесь с политикой и правилами конфиденциальности

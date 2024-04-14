@@ -1,15 +1,9 @@
-import { Metadata } from 'next/types';
-import Link from 'next/link';
+'use client';
 import React from 'react';
 import ProfServices from './Main';
 import Pta4uReviews from '../../components/pta4u-reviews';
 import Pta4uQuickBuy from '../../components/pta4u-quick-buy';
 import Pta4uPayments from '../../components/pta4u-payments';
-
-export const metadata: Metadata = {
-  title: 'Polyglot - translation agency for you | service one',
-  description: 'Polyglot - translation agency for you'
-};
 
 function mainFunc() {
   return (
@@ -39,13 +33,12 @@ function mainFunc() {
             похвастать, что владеет им на достаточном уровне, чтобы провести деловую встречу с
             иностранными партнёрами.
           </p>
-          <Link href={'/contacts'}>
-            <button
-              className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
+          <button
+            onClick={() => window.open(`https://wa.me/79024800262?text=Здравствуйте.`)}
+            className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-              Сделать расчет
-            </button>
-          </Link>
+            Сделать расчет
+          </button>
         </div>
       </div>
     </div>
