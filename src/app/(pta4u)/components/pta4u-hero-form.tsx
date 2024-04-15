@@ -1,3 +1,4 @@
+'use client';
 import Pta4uInput from './pta4u-input';
 import Pta4uButton from './pta4u-button';
 interface IProps {

@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-import { Metadata } from 'next';
 import SetBreadcrumbs from '../../../store/setBreadcrumbs';
 import Pta4uBreadcrumbs from '../components/pta4u-breadcrumbs';
 import Link from 'next/link';
@@ -7,11 +7,6 @@ import Pta4uReviews from '../components/pta4u-reviews';
 import Pta4uQuickBuy from '../components/pta4u-quick-buy';
 import Pta4uPayments from '../components/pta4u-payments';
 import { IBreadcrumbs } from '../types';
-
-export const metadata: Metadata = {
-  title: 'Polyglot - translation agency for you',
-  description: 'Polyglot - translation agency for you'
-};
 
 const breadcrumbs: IBreadcrumbs[] = [
   { title: 'Главная', sort: '0', url: '/' },

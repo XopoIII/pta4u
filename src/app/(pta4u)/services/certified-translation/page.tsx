@@ -1,4 +1,4 @@
-import { Metadata } from 'next/types';
+'use client';
 import Link from 'next/link';
 import React from 'react';
 import { arrCost } from '../written-translation/Arrays';
@@ -8,11 +8,6 @@ import ProfServices from './Main';
 import Pta4uReviews from '../../components/pta4u-reviews';
 import Pta4uQuickBuy from '../../components/pta4u-quick-buy';
 import Pta4uPayments from '../../components/pta4u-payments';
-
-export const metadata: Metadata = {
-  title: 'Polyglot - translation agency for you | service two',
-  description: 'Polyglot - translation agency for you'
-};
 
 function mainFunc() {
   return (
