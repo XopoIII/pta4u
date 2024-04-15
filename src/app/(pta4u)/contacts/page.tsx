@@ -47,7 +47,10 @@ export default function AboutPage() {
                     className={'flex gap-[9px]'}
                     href="https://wa.me/79024800262"
                     target="_blank">
-                    <span className={'w-[26px] h-[26px] bg-[#FFFFFF] p-[4px] rounded-[6px]'}>
+                    <span
+                      className={
+                        'flex align-center justify-center w-[26px] h-[26px] bg-[#FFFFFF] p-[4px] rounded-[6px]'
+                      }>
                       <img src={'/images/icons/wp.svg'} alt={'wp'} />
                     </span>
                     Связаться по WhatsApp
@@ -59,7 +62,10 @@ export default function AboutPage() {
                 <div className={'text-[24px] font-semibold pb-[28px]'}>info@pta4u.ru</div>
                 <div className={'font-semibold text-[#F55751]'}>
                   <Link className={'flex gap-[9px]'} href="mailto:info@pta4u.ru" target="_blank">
-                    <span className={'w-[26px] h-[26px] bg-[#FFFFFF] p-[4px] rounded-[6px]'}>
+                    <span
+                      className={
+                        'flex align-center justify-center w-[26px] h-[26px] bg-[#FFFFFF] p-[4px] rounded-[6px]'
+                      }>
                       <img src={'/images/icons/mail.svg'} alt={'mail'} />
                     </span>
                     Отправить сообщение
