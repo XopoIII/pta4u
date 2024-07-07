@@ -37,7 +37,7 @@ function mainFunc() {
             onClick={() => window.open(`https://wa.me/79024800262?text=Здравствуйте.`)}
             className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-            Сделать расчет
+            Узнать стоимость
           </button>
         </div>
       </div>

@@ -45,15 +45,15 @@ export default function AboutPage() {
               <img src={'/images/bg-1.png'} alt={'img'} />
               <div
                 className="bg-[#3D3038]/[0.4] absolute z-30 top-0 left-0 w-full h-full
-              p-[18px] lg:py-[34px] lg:px-[80px] flex flex-col justify-end">
-                <div className="flex gap-[12px] lg:gap-[20px] justify-between flex-wrap lg:flex-nowrap">
+              p-[18px] lg:py-[34px] lg:px-[50px] flex flex-col justify-end">
+                <div className="flex gap-[12px] lg:gap-[20px] justify-between flex-wrap">
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
                     <img src={'/images/icons/recycle.svg'} alt={'img'} />
                     <div>
-                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
-                        45
+                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[28px]">
+                        &gt; 60
                       </h1>
-                      <p className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[20px] max-w-[120px] lg:max-w-none">
+                      <p className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[14px] max-w-[120px] lg:max-w-none">
                         Языков перевода
                       </p>
                     </div>
@@ -61,11 +61,11 @@ export default function AboutPage() {
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
                     <img src={'/images/icons/doc.svg'} alt={'img'} />
                     <div>
-                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
-                        1 200 000
+                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[28px]">
+                        &gt; 150 000
                       </h1>
                       <p
-                        className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[20px] max-w-[120px] lg:max-w-none"
+                        className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[14px] max-w-[120px] lg:max-w-none"
                         style={{ whiteSpace: 'wrap' }}>
                         Страниц переведено за 2023
                       </p>
@@ -74,11 +74,11 @@ export default function AboutPage() {
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
                     <img src={'/images/icons/smile.svg'} alt={'img'} />
                     <div>
-                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
-                        Более 1000
+                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[28px]">
+                        &gt; 7000
                       </h1>
                       <p
-                        className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[20px] max-w-[120px] lg:max-w-none"
+                        className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[14px] max-w-[120px] lg:max-w-none"
                         style={{ whiteSpace: 'wrap' }}>
                         Довольных клиентов за 2023
                       </p>
@@ -87,11 +87,11 @@ export default function AboutPage() {
                   <div className="flex flex-col lg:flex-row gap-[12px] items-start">
                     <img src={'/images/icons/users.svg'} alt={'img'} />
                     <div>
-                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px]">
-                        50
+                      <h1 className="text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[28px]">
+                        &gt; 80
                       </h1>
                       <p
-                        className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[20px] max-w-[120px] lg:max-w-none"
+                        className="text-white text-[14px] leading-[16px] lg:text-[16px] lg:leading-[14px] max-w-[120px] lg:max-w-none"
                         style={{ whiteSpace: 'wrap' }}>
                         Профессиональных переводчиков
                       </p>
