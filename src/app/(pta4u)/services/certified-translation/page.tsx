@@ -65,7 +65,7 @@ export default function ServicesTowPage() {
                   {item.name}
                 </h2>
                 <p className=" text-lg text-dark leading-[21px] font-semibold pt-1 lg:text-2xl ">
-                  {item.cost} руб.
+                  от {item.cost} руб.
                 </p>
                 <Link href={'/contacts'}>
                   <button className="mt-4 text-[#F55751]  underline underline-offset-4">

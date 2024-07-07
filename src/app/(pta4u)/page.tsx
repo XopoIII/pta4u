@@ -10,8 +10,8 @@ import React from 'react';
 import ClearBreadcrumbs from '../../store/clearBreadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Polyglot - translation agency for you',
-  description: 'Polyglot - translation agency for you'
+  title: 'Polyglot - translation agency for you. Бюро переводов Полиглот.',
+  description: 'Polyglot - translation agency for you. Бюро переводов Полиглот во владивостоке.'
 };
 
 export default function Home() {

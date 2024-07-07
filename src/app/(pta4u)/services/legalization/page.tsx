@@ -31,14 +31,14 @@ function mainFunc() {
             Консульская легализация
           </h2>
           <p className="leading-[18.2px] text-[14px] xl:max-w-[442px] xl:leading-[31px] xl:pt-[29px] font-normal text-center xl:text-[18px] xl:text-start">
-            Для консульской легализации документ должен пройти нотариальную контору, Министерство
-            юстиции РФ, КД МИД России и консульство государства, где он будет использоваться.
+            При Консульской легализации документы проходят несколько инстанций: нотариальная
+            контора, Министерство Юстиции РФ, КД МИД России, Консульство страны подачи документа.
           </p>
           <button
             onClick={() => window.open(`https://wa.me/79024800262?text=Здравствуйте.`)}
             className="w-[200px] h-[50px] flex xl:mt-[39px] justify-center items-center text-white text-[14px]
                 leading-[17px] mt-1 font-semibold bg-gradient-to-r from-[#F55751] to-[#D83CA3] rounded-[50px]">
-            Сделать расчет
+            Узнать стоимость
           </button>
         </div>
       </div>
@@ -52,9 +52,6 @@ export default function ServicesApostillePage() {
       {mainFunc()}
       <div className="bg-[#F2F2F2] flex flex-col justify-center items-center w-full px-5 py-8 mt-9 lg:py-14 xl:pt-[46px] xl:pl-4">
         <div>
-          <h2 className="text-dark font-semibold md:text-2xl md:leading-[28.8px] text-[18px] pt-1 sm:pt-0 w-[310px] pl-3 sm:pl-0 sm:w-fit leading-[21.8px] text-center lg:text-2xl lg:text-start lg:w-fit">
-            Стоимость заверения перевода за документ
-          </h2>
           <div className="flex justify-center items-center gap-5 pt-6 xl:pt-8">
             {arrCost.map((item, i) => (
               <div

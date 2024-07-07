@@ -31,8 +31,9 @@ function mainFunc() {
             Апостиль и легализация документов
           </h2>
           <p className="leading-[18.2px] text-[14px] xl:max-w-[442px] xl:leading-[31px] xl:pt-[29px] font-normal text-center xl:text-[18px] xl:text-start">
-            Когда вы заказываете легализацию в бюро переводов, вы экономите своё время, так как для
-            легализации документов потребуется и их перевод.
+            Заказывая услугу проставления Апостиля или Легализации документов в нашей компании вы
+            экономите свое время. Наши сотрудники сами заполнят все необходимые заявления и подадут
+            документы в соответствующие органы.
           </p>
           <button
             onClick={() => window.open(`https://wa.me/79024800262?text=Здравствуйте.`)}
@@ -53,7 +54,7 @@ export default function ServicesApostillePage() {
       <div className="bg-[#F2F2F2] flex flex-col justify-center items-center w-full px-5 py-8 mt-9 lg:py-14 xl:pt-[46px] xl:pl-4">
         <div>
           <h2 className="text-dark font-semibold md:text-2xl md:leading-[28.8px] text-[18px] pt-1 sm:pt-0 w-[310px] pl-3 sm:pl-0 sm:w-fit leading-[21.8px] text-center lg:text-2xl lg:text-start lg:w-fit">
-            Стоимость заверения перевода за документ
+            Стоимость проставления штампа Апостиль
           </h2>
           <div className="flex justify-center items-center gap-5 pt-6 xl:pt-8">
             {arrCost.map((item, i) => (
@@ -185,6 +186,46 @@ export default function ServicesApostillePage() {
             </p>
             <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
               <span className="text-[#999B9D]">—</span> Апостиль на свидетельство о смерти.
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Сингапур
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Таиланд
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Канада
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Вьетнам
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Индонезия
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Камбоджа
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Канада
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Катар
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Малайзия
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Оман
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Сьерра-Леоне
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> Консульская Легализация Тайвань
+            </p>
+            <p className="text-dark font-normal text-[13px] leading-4 md:text-sm lg:text-base">
+              <span className="text-[#999B9D]">—</span> И другие страны, не входящие в Гаагскую
+              конвенцию
             </p>
           </div>
           <h2 className="pt-7 text-dark font-semibold text-sm leading-4 md:text-base lg:text-2xl xl:pt-11">

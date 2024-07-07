@@ -29,19 +29,19 @@ export default function Pta4uHeroSlider({ slides }: IProps) {
                   className={
                     'w-full h-full z-50 top-0 left-0 absolute p-[28px] lg:p-[70px] flex flex-col justify-end'
                   }>
-                  <div className={'max-w-[556px]'}>
+                  <div className={'max-w-[530px]'}>
                     <h2
                       className={
                         'text-white text-[18px] leading-[22px] lg:text-[30px] lg:leading-[36px] font-semibold'
                       }
-                      style={{ textWrap: 'wrap' }}>
+                      style={{ textWrap: 'balance' }}>
                       {slide.title}
                     </h2>
                     <p
                       className={
                         'text-white mt-[10px] lg:mt-5 text-[14px] leading-[16px] lg:text-[16px] lg:leading-[20px]'
                       }
-                      style={{ textWrap: 'wrap' }}>
+                      style={{ textWrap: 'balance' }}>
                       {slide.descriptions}
                     </p>
                   </div>
