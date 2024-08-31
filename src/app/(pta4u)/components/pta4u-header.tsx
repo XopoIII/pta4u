@@ -1,12 +1,20 @@
 'use client';
-import Link from 'next/link';
 import Pta4uButton from './pta4u-button';
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
+import { useNavigate } from 'react-router-dom';
 
 export default function Pta4uHeader() {
   const [isItOpen, setIsItOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  function handleClick(url: string) {
+    navigate(url);
+    setIsItOpen(false);
+  }
+
   const burgerMenu = [
     {
       title: 'Услуги',
@@ -70,19 +78,19 @@ export default function Pta4uHeader() {
         'container mx-auto flex items-center h-[50px] lg:h-[100px] ' +
         'gap-6 lg:gap-10 xl:gap-20 px-5 justify-between lg:justify-start'
       }>
-      <Link href={'/'}>
+      <a onClick={() => handleClick('/')}>
         <img
           className={'h-[30px] w-[78px] lg:h-[48px] lg:w-[123px]'}
           src={'/images/icons/logo_d.svg'}
           alt={'logo'}
         />
-      </Link>
+      </a>
       <nav className={'hidden lg:block flex-1'}>
         <ul className={'flex justify-start gap-5'}>
           {menu.map((item, i) => {
             return (
               <li key={i}>
-                <Link href={item.url}>{item.title}</Link>
+                <a onClick={() => handleClick(item.url)}>{item.title}</a>
               </li>
             );
           })}
@@ -100,11 +108,11 @@ export default function Pta4uHeader() {
             +7 902 480 0262
           </span>
         </div>
-        <Link href={'/contacts'}>
+        <a onClick={() => handleClick('/contacts')}>
           <Pta4uButton type={'outline'} size={'md'}>
             Заказать
           </Pta4uButton>
-        </Link>
+        </a>
         <GiHamburgerMenu
           className={`${isItOpen ? 'hidden' : 'block'} ml-3 text-2xl lg:hidden`}
           onClick={() => setIsItOpen(true)}
@@ -127,7 +135,9 @@ export default function Pta4uHeader() {
             onClick={() => window.open('tel:+79024800262')}>
             +7 902 480 0262
           </span>
-          <a className={'ml-[16px] text-[#747373] text-[14px]'} onClick={() => setIsItOpen(false)}>
+          <a
+            className={'ml-[16px] text-[#747373] text-[14px]'}
+            onClick={() => handleClick('/contacts')}>
             Все контакты
           </a>
         </div>
@@ -140,7 +150,7 @@ export default function Pta4uHeader() {
                   {item.items.map((link, i) => {
                     return (
                       <li key={i} className={'text-[#747373] text-[13px] leading-7'}>
-                        <Link href={link.url}>{link.title}</Link>
+                        <a onClick={() => handleClick(link.url)}>{link.title}</a>
                       </li>
                     );
                   })}
