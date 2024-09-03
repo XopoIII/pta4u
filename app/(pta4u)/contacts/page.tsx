@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import SetBreadcrumbs from '../../../store/setBreadcrumbs';
+import SetBreadcrumbs from '../../../src/store/setBreadcrumbs';
 import Pta4uBreadcrumbs from '../components/pta4u-breadcrumbs';
 import Link from 'next/link';
 import Pta4uReviews from '../components/pta4u-reviews';

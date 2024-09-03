@@ -6,6 +6,10 @@
   color: #252627;
 }
 
+a {
+  cursor: pointer;
+}
+
 .reviews-slider {
   width: 100%;
 }

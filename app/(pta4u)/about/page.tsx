@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import SetBreadcrumbs from '../../../store/setBreadcrumbs';
+import SetBreadcrumbs from '../../../src/store/setBreadcrumbs';
 import Pta4uBreadcrumbs from '../components/pta4u-breadcrumbs';
 import Pta4uReviews from '../components/pta4u-reviews';
 import Pta4uQuickBuy from '../components/pta4u-quick-buy';

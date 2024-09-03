@@ -1,19 +1,17 @@
+'use client';
 import React, { useEffect } from 'react';
 
 export default function Pta4uPaymentF() {
   const url =
     'https://auth.robokassa.ru/Merchant/PaymentForm/FormV.js?MerchantLogin=pta4u.ru&InvoiceID=0&Culture=ru&Encoding=utf-8&OutSum=0&shp_interface=field&SignatureValue=db3633dd02cf0738a432490073581c50';
   useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = url;
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    // const script = document.createElement('script');
+    // script.src = url;
+    // script.async = true;
+    // document.body.appendChild(script);
+    // return () => {
+    //   document.body.removeChild(script);
+    // };
   }, [url]);
   return (
     <div className={'flex flex-col lg:flex-row w-full gap-[20px] lg:gap-[24px]'}>

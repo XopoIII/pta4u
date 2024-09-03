@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Pta4uHeader from './components/pta4u-header';
 import Pta4uFooter from './components/pta4u-footer';

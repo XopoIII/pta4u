@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { IBreadcrumbs } from '../app/(pta4u)/types';
+import { IBreadcrumbs } from '../../app/(pta4u)/types';
 
 interface IBreadcrumbsStore {
   breadcrumbs: IBreadcrumbs[];
@@ -8,10 +8,8 @@ interface IBreadcrumbsStore {
   clearBreadcrumbs: () => void;
 }
 
-const useBreadcrumbsStore = create<IBreadcrumbsStore>()((set) => ({
+export default create<IBreadcrumbsStore>()((set) => ({
   breadcrumbs: [],
   setBreadcrumbs: (breadcrumbs) => set({ breadcrumbs }),
   clearBreadcrumbs: () => set({ breadcrumbs: [] })
 }));
-
-export { useBreadcrumbsStore };

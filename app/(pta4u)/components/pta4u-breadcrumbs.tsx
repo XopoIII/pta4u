@@ -1,5 +1,5 @@
 'use client';
-import { useBreadcrumbsStore } from '../../../store/breadcrumbs';
+import useBreadcrumbsStore from '../../../src/store/breadcrumbs';
 import Link from 'next/link';
 import React from 'react';
 import { IBreadcrumbs } from '../types';

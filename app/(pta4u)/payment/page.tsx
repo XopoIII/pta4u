@@ -1,6 +1,6 @@
 import { Metadata } from 'next/types';
 import Pta4uBreadcrumbs from '../components/pta4u-breadcrumbs';
-import SetBreadcrumbs from '../../../store/setBreadcrumbs';
+import SetBreadcrumbs from '../../../src/store/setBreadcrumbs';
 import Pta4uPaymentForm from '../components/pta4u-payment-form';
 import Pta4uForYou from '../components/pta4u-for-you';
 import React from 'react';

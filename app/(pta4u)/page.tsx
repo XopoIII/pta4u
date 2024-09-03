@@ -7,7 +7,7 @@ import Pta4uCalculated from './components/pta4u-calculated';
 import Pta4uQuickBuy from './components/pta4u-quick-buy';
 import Pta4uPayments from './components/pta4u-payments';
 import React from 'react';
-import ClearBreadcrumbs from '../../store/clearBreadcrumbs';
+import ClearBreadcrumbs from '../../src/store/clearBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Polyglot - translation agency for you. Бюро переводов Полиглот.',

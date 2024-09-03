@@ -3,15 +3,14 @@ import Pta4uButton from './pta4u-button';
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 export default function Pta4uHeader() {
+  const router = useRouter();
   const [isItOpen, setIsItOpen] = useState(false);
 
-  const navigate = useNavigate();
-
   function handleClick(url: string) {
-    navigate(url);
+    router.push(url, { scroll: false });
     setIsItOpen(false);
   }
 
