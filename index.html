@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полиглот Тревел | Надежда Малашенкова</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #18b9c9;
+            --primary-dark: #0e97a6;
+            --secondary-color: #fffaed;
+            --text-color: #22454e;
+            --light-text: #ffffff;
+            --background-light: #f4fafb;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --accent-light: #e3f8f8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            overflow-x: hidden;
+            position: relative;
+        }
+		
+		a {
+		    border: 0;
+			text-decoration: none;
+		}
+        
+        /* SCROLLBAR STYLING */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--background-light);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        /* UTILITIES */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('hero-person.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 550px;
+            padding: 0 20px 0 50px;
+        }
+        
+        .hero h1 {
+            color: var(--light-text);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero-person {
+            position: absolute;
+            right: 5%;
+            bottom: 0;
+            height: 85%;
+            z-index: 5;
+        }
+        
+        .wave-bottom {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            z-index: 6;
+        }
+        
+        /* FORM STYLING */
+        .tour-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .form-group {
+            position: relative;
+        }
+        
+        .tour-form select, 
+        .tour-form input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            color: var(--text-color);
+            box-shadow: var(--shadow);
+            appearance: none;
+        }
+        
+        .form-group::after {
+            content: "▼";
+            font-size: 12px;
+            color: var(--primary-color);
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        
+        .tour-form button {
+            margin-top: 10px;
+            padding: 16px 24px;
+            font-size: 16px;
+            border-radius: 30px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        /* ABOUT SECTION */
+        .about {
+            background-color: var(--secondary-color);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-photo {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+        
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .social-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary-dark);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-button i {
+            font-size: 20px;
+        }
+        
+        .decorative-element {
+            position: absolute;
+            opacity: 0.2;
+        }
+        
+        .element-1 {
+            right: 10%;
+            top: 20%;
+        }
+        
+        .element-2 {
+            left: 5%;
+            bottom: 15%;
+        }
+        
+        /* HOT DEALS SECTION */
+        .hot-deals {
+            padding: 100px 0;
+            background-color: var(--background-light);
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-color);
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .deal-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+        }
+        
+        .deal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .deal-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .deal-content {
+            padding: 20px;
+        }
+        
+        .deal-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .deal-price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .deal-features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+        
+        .deal-button {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+        }
+        
+        /* WHY CHOOSE SECTION */
+        .why-choose {
+            background-color: var(--accent-light);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            color: var(--primary-color);
+            font-size: 30px;
+        }
+        
+        .benefit-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+        
+        /* TESTIMONIALS SECTION */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--background-light);
+        }
+        
+        .testimonial-slider {
+            overflow: hidden;
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 20px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+        
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            line-height: 0;
+        }
+        
+        .testimonial-text::before {
+            top: 15px;
+            left: -15px;
+        }
+        
+        .testimonial-text::after {
+            bottom: -10px;
+            right: -15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-trip {
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+        
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            font-size: 18px;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .control-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* CONTACT SECTION */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .contact-info-content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info-content p, 
+        .contact-info-content a {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info-content a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* FOOTER */
+        .footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+		
+        .footer a {
+            color: white;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--primary-color);
+        }
+        
+        .footer-about p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            font-size: 18px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .footer-contact-item i {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-top: 3px;
+        }
+        
+        .footer-contact-info {
+            flex: 1;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* MODAL */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            transform: translateY(50px);
+            transition: transform 0.5s ease;
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .modal-form .btn {
+            width: 100%;
+        }
+        
+        /* DECORATIVE ELEMENTS */
+        .palm-decoration {
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            width: 120px;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .shell-decoration {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 80px;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .airplane-path {
+            position: absolute;
+            top: 100px;
+            right: -100px;
+            width: 200px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        /* ANIMATIONS */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* WHATSAPP BUTTON */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 100;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        /* MEDIA QUERIES */
+        @media (max-width: 992px) {
+            .hero-person {
+                height: 70%;
+                right: 0;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-info, .contact-form {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 0 20px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            .hero-person {
+                display: none;
+            }
+            
+            .tour-form {
+                margin: 0 auto;
+            }
+            
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-content {
+                padding: 0 20px;
+            }
+            
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .section-header p {
+                font-size: 16px;
+            }
+            
+            .benefit-card, .deal-card, .testimonial-card {
+                padding: 20px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Отдых начинается с выбора</h1>
+            <div class="tour-form">
+                <div class="form-group">
+                    <select id="destination">
+                        <option value="" disabled selected>Куда...</option>
+                        <option value="maldives">Мальдивы</option>
+                        <option value="turkey">Турция</option>
+                        <option value="thailand">Таиланд</option>
+                        <option value="vietnam">Вьетнам</option>
+                        <option value="dubai">Дубай</option>
+                        <option value="egypt">Египет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="budget">
+                        <option value="" disabled selected>Бюджет поездки...</option>
+                        <option value="50000">До 50 000 ₽</option>
+                        <option value="100000">До 100 000 ₽</option>
+                        <option value="150000">До 150 000 ₽</option>
+                        <option value="200000">До 200 000 ₽</option>
+                        <option value="unlimited">Без ограничений</option>
+                    </select>
+                </div>
+                <button class="btn" id="searchTourBtn">Пусть Надежда подберет мне тур</button>
+            </div>
+        </div>
+        <svg class="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+            <path fill="#fffaed" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,85.3C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+        </svg>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-photo">
+                    <img src="mna.jpg" alt="Надежда Малашенкова">
+                </div>
+                <div class="about-content">
+                    <h2>Привет</h2>
+                    <p>Меня зовут Надежда, и я помогаю организовывать яркий и незабываемый отдых. Подберу лучший тур по вашим пожеланиям и бюджету! Мое турагентство "Полиглот Тревел" специализируется на уникальных маршрутах и качественном сервисе. Я лично проверяю каждое направление и работаю только с надежными партнерами.</p>
+                    <a href="https://www.instagram.com/nadezhda_polyglot/" class="social-button">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+		<img src="s.png" class="decorative-element element-1">
+		<img src="m.png" class="decorative-element element-2">
+    </section>
+
+    <!-- HOT DEALS SECTION -->
+    <section class="hot-deals" id="tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Горячие предложения</h2>
+                <p>Успейте забронировать тур по специальной цене! Количество мест ограничено.</p>
+            </div>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('deal-image1.jpg');">
+                    </div>
+                    <div class="deal-content">
+                        <h3 class="deal-title">Мальдивы</h3>
+                        <p class="deal-price">от 90.000 ₽</p>
+                        <div class="deal-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i> 7 ночей
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i> Всё включено
+                            </div>
+                        </div>
+                        <a href="#" class="btn deal-button" data-destination="Мальдивы">Узнать больше</a>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('deal-image2.jpg');">
+                    </div>
+                    <div class="deal-content">
+                        <h3 class="deal-title">Турция</h3>
+                        <p class="deal-price">от 50.000 ₽</p>
+                        <div class="deal-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i> 7 ночей
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i> Всё включено
+                            </div>
+                        </div>
+                        <a href="#" class="btn deal-button" data-destination="Турция">Узнать больше</a>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('deal-image3.jpg');">
+                    </div>
+                    <div class="deal-content">
+                        <h3 class="deal-title">Вьетнам</h3>
+                        <p class="deal-price">от 70.000 ₽</p>
+                        <div class="deal-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i> 10 ночей
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i> Завтраки
+                            </div>
+                        </div>
+                        <a href="#" class="btn deal-button" data-destination="Вьетнам">Узнать больше</a>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('deal-image4.jpg');">
+                    </div>
+                    <div class="deal-content">
+                        <h3 class="deal-title">Таиланд</h3>
+                        <p class="deal-price">от 65.000 ₽</p>
+                        <div class="deal-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i> 11 ночей
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-utensils"></i> Завтраки
+                            </div>
+                        </div>
+                        <a href="#" class="btn deal-button" data-destination="Таиланд">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE SECTION -->
+    <section class="why-choose" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему выбирают меня</h2>
+                <p>Моя миссия — сделать ваш отдых незабываемым, комфортным и беззаботным</p>
+            </div>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="benefit-title">Проверенные отели</h3>
+                    <p class="benefit-text">Я лично проверяю все отели и работаю только с надежными партнерами для вашего комфортного отдыха</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="benefit-title">Индивидуальный подход</h3>
+                    <p class="benefit-text">Подбираю туры с учетом всех ваших пожеланий и предпочтений, чтобы отдых был идеальным</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3 class="benefit-title">Лучшие цены</h3>
+                    <p class="benefit-text">Благодаря прямым контрактам с отелями и туроператорами, предлагаю оптимальные цены</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="benefit-title">Поддержка 24/7</h3>
+                    <p class="benefit-text">Я всегда на связи до, во время и после вашего путешествия, готова помочь в любой ситуации</p>
+                </div>
+            </div>
+        </div>
+		<img src="p.png" class="palm-decoration">
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Отзывы клиентов</h2>
+                <p>Что говорят о моей работе те, кто уже путешествовал с Полиглот Тревел</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="/api/placeholder/80/80" alt="Анна">
+                            </div>
+                            <p class="testimonial-text">Надежда организовала нам потрясающий отдых на Мальдивах! Всё было идеально: перелет, трансфер, отель с потрясающим видом на океан. Особенно приятно, что Надежда всегда была на связи и помогала решать все вопросы. Обязательно обратимся к ней снова!</p>
+                            <h4 class="testimonial-author">Анна и Дмитрий</h4>
+                            <p class="testimonial-trip">Мальдивы, апрель 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="/api/placeholder/80/80" alt="Михаил">
+                            </div>
+                            <p class="testimonial-text">Спасибо Надежде за прекрасно организованный тур в Турцию! Отличный отель, вкусная еда и развлечения на любой вкус. Надежда учла все наши пожелания и предложила идеальные варианты для семейного отдыха с детьми. Всем рекомендую!</p>
+                            <h4 class="testimonial-author">Михаил</h4>
+                            <p class="testimonial-trip">Турция, май 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="/api/placeholder/80/80" alt="Екатерина">
+                            </div>
+                            <p class="testimonial-text">Обратилась к Надежде по рекомендации подруги, и не пожалела! Она подобрала нам тур во Вьетнам по очень привлекательной цене. Отдых получился незабываемым: чистейшие пляжи, интересные экскурсии и вкуснейшая кухня. Надежда — настоящий профессионал!</p>
+                            <h4 class="testimonial-author">Екатерина</h4>
+                            <p class="testimonial-trip">Вьетнам, март 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="control-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="control-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Свяжитесь со мной</h2>
+                <p>Готовы отправиться в путешествие мечты? Заполните форму, и я свяжусь с вами!</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Адрес</h3>
+                            <p>г. Владивосток, ул. Светланская, 83</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Телефон</h3>
+                            <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:info@polyglot-travel.ru">info@polyglot-travel.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Режим работы</h3>
+                            <p>Пн-Пт: 10:00 - 19:00<br>Сб: 11:00 - 17:00<br>Вс: выходной</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="tour-request-form">
+                        <input type="text" class="form-input" placeholder="Ваше имя *" required>
+                        <input type="tel" class="form-input" placeholder="Телефон *" required>
+                        <input type="email" class="form-input" placeholder="Email *" required>
+                        <select class="form-input">
+                            <option value="" disabled selected>Направление</option>
+                            <option value="maldives">Мальдивы</option>
+                            <option value="turkey">Турция</option>
+                            <option value="thailand">Таиланд</option>
+                            <option value="vietnam">Вьетнам</option>
+                            <option value="dubai">Дубай</option>
+                            <option value="other">Другое</option>
+                        </select>
+                        <textarea class="form-input" placeholder="Ваше сообщение..."></textarea>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <svg class="shell-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path fill="#18b9c9" d="M92.8 59.6c-1.4-5.6-5.6-10.4-11.2-12.6-2-0.8-4.2-1.2-6.4-1.2-2.2-0.1-4.4 0.3-6.4 1.2-5.6 2.2-9.8 7-11.2 12.6-0.8 2.8-0.9 5.9-0.4 8.8 0.5 2.9 1.7 5.7 3.4 8.2 3.8 5.4 9.4 9.1 14.6 9.1s10.8-3.7 14.6-9.1c1.7-2.4 2.9-5.2 3.4-8.2 0.5-2.9 0.4-5.9-0.4-8.8z"/>
+            <path fill="#18b9c9" d="M75.2 13.8c-7.8 0-14.2 6.4-14.2 14.2v16.2c2-0.8 4.2-1.2 6.4-1.2s4.4 0.4 6.4 1.2c2 0.8 3.8 2 5.4 3.4 1.6 1.4 2.9 3.2 3.8 5.2 1.8-1.2 3.4-2.8 4.6-4.6 1.2-1.8 2.2-3.8 2.6-6 0.5-2.1 0.5-4.4 0.1-6.6-0.4-2.2-1.2-4.2-2.3-6.1-1.1-1.9-2.5-3.5-4.2-4.9-1.7-1.3-3.6-2.4-5.6-3.1-0.9-0.3-1.9-0.6-2.9-0.7 0-5.7-0.1-7-0.1-7z"/>
+            <path fill="#18b9c9" d="M41.8 33.2c-1.7-1.4-3.6-2.4-5.7-3.1s-4.3-1-6.5-0.9c-2.2 0.1-4.4 0.6-6.4 1.5-2 0.9-3.8 2.1-5.3 3.7-3 3-4.9 7-5.2 11.2-0.3 4.2 0.9 8.4 3.5 11.9 1.3 1.8 2.9 3.3 4.8 4.5 1.9 1.2 3.9 2 6.1 2.5 2.1 0.5 4.4 0.5 6.6 0.1s4.2-1.2 6.1-2.4c1.9-1.2 3.5-2.6 4.9-4.4 0.7-0.9 1.2-1.9 1.7-2.9 0.7-2 0.8-4.2 0.4-6.3-0.5-2.1-1.4-4.1-2.7-5.7-1.3-1.7-2.9-3-4.8-4z"/>
+            <path fill="#18b9c9" d="M51.6 28.5c-2.9 3.8-4.5 8.5-4.5 13.3V45c1-0.9 2.1-1.6 3.3-2.3 1.8-1 3.8-1.7 5.9-2 2.1-0.3 4.2-0.2 6.2 0.4V28.9c0-1.9-0.8-3.8-2.2-5.2s-3.3-2.2-5.2-2.2c-1.9 0-3.8 0.8-5.2 2.2-0.2 0.2-0.4 0.4-0.6 0.6l2.3 4.2z"/>
+            <path fill="#18b9c9" d="M31.4 23.2c2.3-0.6 4.3-1.8 6-3.4 1.6-1.6 2.9-3.6 3.6-5.8 0.7-2.2 0.8-4.6 0.4-6.9-0.4-2.3-1.4-4.4-2.8-6.2-0.7-0.9-1.5-1.7-2.4-2.3-0.9-0.7-1.9-1.2-2.9-1.6-1-0.4-2.1-0.7-3.2-0.8-1.1-0.1-2.2-0.1-3.3 0.2-2.3 0.5-4.4 1.6-6.1 3.2-1.7 1.6-3 3.5-3.8 5.7-0.8 2.2-1 4.5-0.7 6.8 0.3 2.3 1.2 4.4 2.5 6.3 1.4 1.8 3.1 3.3 5.1 4.4 2.1 0.7 4.3 0.9 6.5 0.6l1.1-0.2z"/>
+        </svg>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Полиглот<span>Тревел</span></a>
+                    <p>Турагентство ярких путешествий с персональным подходом к каждому клиенту. Отдых начинается с выбора, а незабываемые впечатления — с нас!</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nadezhda_polyglot/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Мальдивы</a></li>
+                        <li><a href="#">Турция</a></li>
+                        <li><a href="#">Таиланд</a></li>
+                        <li><a href="#">Вьетнам</a></li>
+                        <li><a href="#">Дубай</a></li>
+                        <li><a href="#">Египет</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#tours">Туры</a></li>
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Контакты</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="footer-contact-info">
+                            г. Владивосток, ул. Светланская, 83
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="footer-contact-info">
+                            <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="footer-contact-info">
+                            <a href="mailto:info@polyglot-travel.ru">info@polyglot-travel.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2025 Полиглот Тревел. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/79001234567" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL -->
+    <div class="modal" id="tourModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3 class="modal-title">Оставьте заявку на тур</h3>
+            <form class="modal-form">
+                <input type="text" class="form-input" placeholder="Ваше имя *" required>
+                <input type="tel" class="form-input" placeholder="Телефон *" required>
+                <input type="email" class="form-input" placeholder="Email *" required>
+                <input type="hidden" id="modalDestination" value="">
+                <textarea class="form-input" placeholder="Комментарий к заявке"></textarea>
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonial Slider
+            const track = document.querySelector('.testimonial-track');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let slideIndex = 0;
+            
+            function updateSlider() {
+                track.style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+            
+            prevBtn.addEventListener('click', function() {
+                slideIndex = (slideIndex > 0) ? slideIndex - 1 : slides.length - 1;
+                updateSlider();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                slideIndex = (slideIndex < slides.length - 1) ? slideIndex + 1 : 0;
+                updateSlider();
+            });
+            
+            // Auto slide
+            setInterval(function() {
+                slideIndex = (slideIndex < slides.length - 1) ? slideIndex + 1 : 0;
+                updateSlider();
+            }, 5000);
+            
+            // Modal functionality
+            const modal = document.getElementById('tourModal');
+            const modalDestinationField = document.getElementById('modalDestination');
+            const closeModal = document.querySelector('.close-modal');
+            const dealButtons = document.querySelectorAll('.deal-button');
+            const searchTourBtn = document.getElementById('searchTourBtn');
+            
+            function openModal(destination) {
+                modal.classList.add('active');
+                modalDestinationField.value = destination || '';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeModalFunc() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            dealButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const destination = this.getAttribute('data-destination');
+                    openModal(destination);
+                });
+            });
+            
+            searchTourBtn.addEventListener('click', function() {
+                const destination = document.getElementById('destination').value;
+                openModal(destination);
+            });
+            
+            closeModal.addEventListener('click', closeModalFunc);
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModalFunc();
+                }
+            });
+            
+            // Form submission
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Here you would normally send the form data to the server
+                    alert('Спасибо за заявку! Надежда свяжется с вами в ближайшее время.');
+                    if (modal.classList.contains('active')) {
+                        closeModalFunc();
+                    }
+                    form.reset();
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            window.scrollTo({
+                                top: target.offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Animation on scroll
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.deal-card, .benefit-card, .contact-info-item, .contact-form');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('fade-in');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once at load
+        });
+    </script>
+</body>
+</html>
