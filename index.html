@@ -430,6 +430,7 @@
             border-radius: 50%;
             margin: 0 auto 20px;
             overflow: hidden;
+		background-color: var(--background-light);
         }
         
         .testimonial-image img {
@@ -482,6 +483,7 @@
             justify-content: center;
             gap: 15px;
             margin-top: 30px;
+		padding-bottom: 12px;
         }
         
         .control-btn {
@@ -1020,7 +1022,7 @@
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3 class="benefit-title">Проверенные отели</h3>
-                    <p class="benefit-text">Я лично проверяю все отели и работаю только с надежными партнерами для вашего комфортного отдыха</p>
+                    <p class="benefit-text">Я много путешествую — как самостоятельно, так и в рамках рекламных туров — и лично посещаю большинство отелей, которые рекомендую своим туристам. Для меня важно быть уверенной, что каждый из вас получит безупречный сервис и максимум комфорта на отдыхе</p>
                 </div>
                 
                 <div class="benefit-card">
@@ -1064,7 +1066,7 @@
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-image">
-                                <img src="/api/placeholder/80/80" alt="Анна">
+                                
                             </div>
                             <p class="testimonial-text">Надежда организовала нам потрясающий отдых на Мальдивах! Всё было идеально: перелет, трансфер, отель с потрясающим видом на океан. Особенно приятно, что Надежда всегда была на связи и помогала решать все вопросы. Обязательно обратимся к ней снова!</p>
                             <h4 class="testimonial-author">Анна и Дмитрий</h4>
@@ -1075,7 +1077,7 @@
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-image">
-                                <img src="/api/placeholder/80/80" alt="Михаил">
+                                
                             </div>
                             <p class="testimonial-text">Спасибо Надежде за прекрасно организованный тур в Турцию! Отличный отель, вкусная еда и развлечения на любой вкус. Надежда учла все наши пожелания и предложила идеальные варианты для семейного отдыха с детьми. Всем рекомендую!</p>
                             <h4 class="testimonial-author">Михаил</h4>
@@ -1086,7 +1088,7 @@
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-image">
-                                <img src="/api/placeholder/80/80" alt="Екатерина">
+                                
                             </div>
                             <p class="testimonial-text">Обратилась к Надежде по рекомендации подруги, и не пожалела! Она подобрала нам тур во Вьетнам по очень привлекательной цене. Отдых получился незабываемым: чистейшие пляжи, интересные экскурсии и вкуснейшая кухня. Надежда — настоящий профессионал!</p>
                             <h4 class="testimonial-author">Екатерина</h4>
@@ -1139,7 +1141,7 @@
                         </div>
                         <div class="contact-info-content">
                             <h3>Email</h3>
-                            <a href="mailto:info@polyglot-travel.ru">info@polyglot-travel.ru</a>
+                            <a href="mailto:malashenkova_travel@mail.ru">malashenkova_travel@mail.ru</a>
                         </div>
                     </div>
                     
@@ -1148,8 +1150,8 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="contact-info-content">
-                            <h3>Режим работы</h3>
-                            <p>Пн-Пт: 10:00 - 19:00<br>Сб: 11:00 - 17:00<br>Вс: выходной</p>
+                            <h3>Режим работы офиса</h3>
+                            <p>Пн-Пт: 9:00 - 18:00<br>Сб-Вс: 9:00 - 19:00</p>
                         </div>
                     </div>
                 </div>
@@ -1237,7 +1239,7 @@
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
                         <div class="footer-contact-info">
-                            <a href="mailto:info@polyglot-travel.ru">info@polyglot-travel.ru</a>
+                            <a href="mailto:malashenkova_travel@mail.ru">malashenkova_travel@mail.ru</a>
                         </div>
                     </div>
                 </div>
@@ -1326,11 +1328,12 @@
                     openModal(destination);
                 });
             });
-            
-            searchTourBtn.addEventListener('click', function() {
-                const destination = document.getElementById('destination').value;
-                openModal(destination);
-            });
+            if (searchTourBtn) {
+	            searchTourBtn.addEventListener('click', function() {
+	                const destination = document.getElementById('destination').value;
+	                openModal(destination);
+	            });
+	    }
             
             closeModal.addEventListener('click', closeModalFunc);
             
