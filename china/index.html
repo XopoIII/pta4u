@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туры в Китай | Полиглот Тревел | Надежда Малашенкова</title>
+    <meta name="description" content="Туры в Китай от турагентства Полиглот Тревел. Великая Китайская стена, Запретный город, современные мегаполисы. Организуем незабываемый отдых в Китае.">
+    <meta name="keywords" content="Китай, туры в Китай, отдых в Китае, Полиглот Тревел, Надежда Малашенкова, туры, путешествия, Пекин, Шанхай, Сиань">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="navigation-placeholder"></div>
+    <!-- DALL-E Hero Image Prompt: "Great Wall of China winding through misty mountains at sunrise, ancient stone fortification stretching into distance, autumn colors on mountain vegetation, morning mist in valleys, golden sunrise light breaking through clouds, dramatic landscape, photorealistic travel photography, epic scale, 16:9 aspect ratio" -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1920x1080/DC143C/FFFFFF?text=China+Great+Wall') no-repeat center center; background-size: cover;">
+        <div class="hero-content">
+            <h1>Китай<br>Древняя цивилизация</h1>
+            <p class="hero-subtitle">Великая стена, императорские дворцы, терракотовая армия и современные мегаполисы</p>
+            <a href="#contact" class="btn">Забронировать тур</a>
+        </div>
+        <svg class="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+            <path fill="#fffaed" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,85.3C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+        </svg>
+    </section>
+    <section class="country-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-content">
+                    <h2>Китай — колыбель цивилизации</h2>
+                    <p>Китай – это страна с пятитысячелетней историей, где древние традиции сохраняются рядом с ультра-современными технологиями. Здесь каждый город рассказывает свою уникальную историю.</p>
+                    <p>От Великой Китайской стены до Запретного города, от терракотовой армии в Сиане до небоскребов Шанхая – Китай поражает масштабом и разнообразием.</p>
+                </div>
+                <div class="info-image">
+                    <!-- DALL-E Info Image Prompt: "Forbidden City in Beijing China with traditional Chinese imperial architecture, red walls and golden roofs, ornate dragon decorations, tourists walking in courtyard, clear blue sky, symmetrical composition, photorealistic travel photography, vibrant red and gold colors, cultural heritage site" -->
+                    <img src="https://via.placeholder.com/800x400/CD5C5C/FFFFFF?text=China+Forbidden+City" alt="Китай" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Забронировать тур в Китай</h2>
+                <p>Готовы отправиться в Китай? Заполните форму, и мы свяжемся с вами!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-info-content">
+                            <h3>Адрес</h3>
+                            <p>г. Владивосток, пр-т Красного знамени, 3, офис 102</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-info-content">
+                            <h3>Телефон</h3>
+                            <a href="tel:+79952817399">+7 (995) 281-73-99</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="china-request-form">
+                        <input type="text" id="contactName" class="form-input" placeholder="Ваше имя *" required>
+                        <input type="tel" id="contactPhone" class="form-input" placeholder="Телефон *" required>
+                        <input type="email" id="contactEmail" class="form-input" placeholder="Email *" required>
+                        <textarea id="contactMessage" class="form-input" placeholder="Ваше сообщение..."></textarea>
+                        <button type="submit" class="btn" style="width: 100%;">Отправить в WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+    <div id="whatsapp-placeholder"></div>
+    <script src="../script.js"></script>
+    <script src="../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('china');
+            document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
+            document.getElementById('whatsapp-placeholder').innerHTML = Components.renderWhatsAppButton();
+            Components.init();
+            
+            const form = document.getElementById('china-request-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const name = document.getElementById('contactName').value;
+                    const phone = document.getElementById('contactPhone').value;
+                    const email = document.getElementById('contactEmail').value;
+                    const message = document.getElementById('contactMessage').value;
+                    
+                    let whatsappMessage = `Здравствуйте! Меня зовут ${name}.\n\n`;
+                    whatsappMessage += `📞 Телефон: ${phone}\n📧 Email: ${email}\n🌍 Направление: Китай\n`;
+                    if (message) whatsappMessage += `💬 Сообщение: ${message}\n`;
+                    
+                    const whatsappURL = `https://wa.me/79952817399?text=${encodeURIComponent(whatsappMessage)}`;
+                    window.open(whatsappURL, '_blank');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

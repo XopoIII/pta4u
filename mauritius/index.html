@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туры на Маврикий | Полиглот Тревел | Надежда Малашенкова</title>
+    <meta name="description" content="Туры на Маврикий от турагентства Полиглот Тревел. Роскошные курорты, лагуны, водопады. Организуем незабываемый отдых на Маврикии с персональным подходом.">
+    <meta name="keywords" content="Маврикий, туры на Маврикий, отдых на Маврикии, Полиглот Тревел, Надежда Малашенкова, туры, путешествия">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="navigation-placeholder"></div>
+    <!-- DALL-E Hero Image Prompt: "Le Morne Brabant mountain in Mauritius rising from turquoise lagoon, UNESCO world heritage site, pristine white sand beach in foreground, coral reef visible through clear water, tropical paradise with palm trees, dramatic clouds around mountain peak, golden hour lighting, photorealistic landscape photography, 16:9 aspect ratio" -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1920x1080/4B0082/FFFFFF?text=Mauritius+Le+Morne') no-repeat center center; background-size: cover;">
+        <div class="hero-content">
+            <h1>Маврикий<br>Остров грёз</h1>
+            <p class="hero-subtitle">Разноцветные пески, коралловые рифы, роскошные курорты и креольская культура</p>
+            <a href="#contact" class="btn">Забронировать тур</a>
+        </div>
+        <svg class="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+            <path fill="#fffaed" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,85.3C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+        </svg>
+    </section>
+    <section class="country-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-content">
+                    <h2>Маврикий — остров мечты</h2>
+                    <p>Маврикий – это вулканический остров в Индийском океане, окруженный коралловыми рифами и лагунами невероятной красоты. Здесь африканская, европейская, индийская и китайская культуры создали уникальный креольский колорит.</p>
+                    <p>Разноцветные пески Шамарель, водопады Чамарель, чайные плантации в горах и роскошные beach resort создают неповторимую атмосферу этого тропического рая.</p>
+                </div>
+                <div class="info-image">
+                    <!-- DALL-E Info Image Prompt: "Seven Colored Earth geological formation in Chamarel Mauritius, sand dunes with distinct bands of red, brown, violet, blue, green, purple and yellow colors, tropical vegetation surrounding, tourists viewing platform, clear day, unique natural phenomenon, photorealistic travel photography, vibrant earth tones" -->
+                    <img src="https://via.placeholder.com/800x400/9370DB/FFFFFF?text=Mauritius+Seven+Colors" alt="Маврикий" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Забронировать тур на Маврикий</h2>
+                <p>Готовы отправиться на Маврикий? Заполните форму, и мы свяжемся с вами!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-info-content">
+                            <h3>Адрес</h3>
+                            <p>г. Владивосток, пр-т Красного знамени, 3, офис 102</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-info-content">
+                            <h3>Телефон</h3>
+                            <a href="tel:+79952817399">+7 (995) 281-73-99</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="mauritius-request-form">
+                        <input type="text" id="contactName" class="form-input" placeholder="Ваше имя *" required>
+                        <input type="tel" id="contactPhone" class="form-input" placeholder="Телефон *" required>
+                        <input type="email" id="contactEmail" class="form-input" placeholder="Email *" required>
+                        <textarea id="contactMessage" class="form-input" placeholder="Ваше сообщение..."></textarea>
+                        <button type="submit" class="btn" style="width: 100%;">Отправить в WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+    <div id="whatsapp-placeholder"></div>
+    <script src="../script.js"></script>
+    <script src="../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('mauritius');
+            document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
+            document.getElementById('whatsapp-placeholder').innerHTML = Components.renderWhatsAppButton();
+            Components.init();
+            
+            const form = document.getElementById('mauritius-request-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const name = document.getElementById('contactName').value;
+                    const phone = document.getElementById('contactPhone').value;
+                    const email = document.getElementById('contactEmail').value;
+                    const message = document.getElementById('contactMessage').value;
+                    
+                    let whatsappMessage = `Здравствуйте! Меня зовут ${name}.\n\n`;
+                    whatsappMessage += `📞 Телефон: ${phone}\n📧 Email: ${email}\n🌍 Направление: Маврикий\n`;
+                    if (message) whatsappMessage += `💬 Сообщение: ${message}\n`;
+                    
+                    const whatsappURL = `https://wa.me/79952817399?text=${encodeURIComponent(whatsappMessage)}`;
+                    window.open(whatsappURL, '_blank');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
