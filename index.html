@@ -16,7 +16,9 @@
     <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>СЕРВИС. ЗАБОТА. НАДЁЖНОСТЬ.<br><br>Ваш идеальный отдых — <br>с лёгкостью и вниманием к деталям.</h1>
+            <h1>СЕРВИС. ЗАБОТА. НАДЁЖНОСТЬ.</h1>
+            <br><br>
+            <h2>Ваш идеальный отдых — <br>с лёгкостью и вниманием к деталям.</h2>
             <div class="tour-form">
                 <div class="tv-search-form tv-moduleid-9957730"></div>
             </div>
@@ -151,7 +153,8 @@
         <div class="container">
             <div class="section-header">
                 <h2>Почему выбирают нас</h2>
-                <p>Наша миссия — дарить яркие, наполняющие путешествия: будь то семейный отдых, романтическое путешествие вдвоём или атмосферная поездка в кругу друзей.</p>
+                <p>Наша миссия — дарить яркие, наполняющие путешествия: будь то семейный отдых, романтическое
+                    путешествие вдвоём или атмосферная поездка в кругу друзей.</p>
             </div>
             <div class="benefits">
                 <div class="benefit-card">
@@ -368,16 +371,16 @@
     <script src="components.js"></script>
     <script>
         // Инициализация главной страницы
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Вставляем навигацию
             document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('home');
-            
+
             // Вставляем футер
             document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
-            
+
             // Вставляем кнопку WhatsApp
             document.getElementById('whatsapp-placeholder').innerHTML = Components.renderWhatsAppButton();
-            
+
             // Инициализируем компоненты
             Components.init();
         });
