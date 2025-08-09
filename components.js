@@ -6,13 +6,15 @@ class Components {
             <div class="container">
                 <div class="footer-container">
                     <div class="footer-about">
-                        <a href="index.html" class="footer-logo">Полиглот<span>Тревел</span></a>
-                        <p>Турагентство ярких путешествий с персональным подходом к каждому клиенту. Отдых начинается с выбора, а незабываемые впечатления — с нас!</p>
+                        <a href="/" class="footer-logo">
+                            <img src="./logo2withoutBgClean_small.png" alt="Полиглот Тревел" class="footer-logo-img">
+                        </a>
+                        <p class="footer-slogan">Премиальный сервис. Идеальный отдых. Персональный подход.</p>
                         <div class="footer-social">
-                            <a href="https://www.instagram.com/nadezhda_polyglot/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                            <a href="https://www.instagram.com/nadezhda_polyglot/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://t.me/" class="social-icon" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                            <a href="https://wa.me/79952817399" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://vk.com/" class="social-icon" aria-label="VK"><i class="fab fa-vk"></i></a>
                         </div>
                     </div>
 
@@ -20,24 +22,25 @@ class Components {
                         <h3 class="footer-heading">Направления</h3>
                         <ul class="footer-links">
                             <li><a href="/maldives/">Мальдивы</a></li>
+                            <li><a href="/uae/">ОАЭ</a></li>
                             <li><a href="/turkey/">Турция</a></li>
                             <li><a href="/thailand/">Таиланд</a></li>
                             <li><a href="/vietnam/">Вьетнам</a></li>
-                            <li><a href="/uae/">ОАЭ</a></li>
                             <li><a href="/china/">Китай</a></li>
                             <li><a href="/seychelles/">Сейшелы</a></li>
                             <li><a href="/mauritius/">Маврикий</a></li>
+                            <li><a href="/cruises/">Круизы</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-links">
                         <h3 class="footer-heading">Полезные ссылки</h3>
                         <ul class="footer-links">
-                            <li><a href="index.html#about">О нас</a></li>
-                            <li><a href="index.html#tours">Туры</a></li>
-                            <li><a href="index.html#advantages">Преимущества</a></li>
-                            <li><a href="index.html#testimonials">Отзывы</a></li>
-                            <li><a href="index.html#contact">Контакты</a></li>
+                            <li><a href="/about/">О нас</a></li>
+                            <li><a href="/#advantages">Преимущества</a></li>
+                            <li><a href="/#testimonials">Отзывы</a></li>
+                            <li><a href="/#contact">Контакты</a></li>
+                            <li><a href="/search/">Онлайн‑поиск тура</a></li>
                         </ul>
                     </div>
 
@@ -64,19 +67,16 @@ class Components {
                     </div>
                 </div>
 
+                <div class="footer-disclaimer">
+                    Все материалы и цены, размещенные на сайте, носят справочный характер и не являются ни публичной офертой, ни рекламой. Используя сайт, вы соглашаетесь с
+                    <a href="/policy/" target="_blank" rel="noopener">политикой обработки персональных данных</a>.
+                </div>
+
                 <div class="copyright">
                     © 2025 Полиглот Тревел. Все права защищены.
                 </div>
             </div>
         </footer>
-        `;
-    }
-
-    static renderWhatsAppButton() {
-        return `
-        <a href="https://wa.me/79952817399" class="whatsapp-button" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
         `;
     }
 
@@ -87,24 +87,29 @@ class Components {
         <nav class="nav" id="navigation">
             <div class="container">
                 <div class="nav-container">
-                    <a href="/" class="nav-logo">Полиглот<span>Тревел</span></a>
+                    <a href="/" class="nav-logo">
+                        <img src="./logo2withoutBgClean_small.png" alt="Полиглот Тревел" class="nav-logo-img">
+                    </a>
                     <ul class="nav-links">
                         <li><a href="/" class="${isActive('home')}">Главная</a></li>
                         <li class="nav-dropdown">
                             <a href="#" class="nav-dropdown-toggle">Направления <i class="fas fa-chevron-down"></i></a>
                             <ul class="nav-dropdown-menu">
                                 <li><a href="/maldives/" class="${isActive('maldives')}">Мальдивы</a></li>
+                                <li><a href="/uae/" class="${isActive('uae')}">ОАЭ</a></li>
                                 <li><a href="/turkey/" class="${isActive('turkey')}">Турция</a></li>
                                 <li><a href="/thailand/" class="${isActive('thailand')}">Таиланд</a></li>
                                 <li><a href="/vietnam/" class="${isActive('vietnam')}">Вьетнам</a></li>
-                                <li><a href="/uae/" class="${isActive('uae')}">ОАЭ</a></li>
                                 <li><a href="/china/" class="${isActive('china')}">Китай</a></li>
                                 <li><a href="/seychelles/" class="${isActive('seychelles')}">Сейшелы</a></li>
                                 <li><a href="/mauritius/" class="${isActive('mauritius')}">Маврикий</a></li>
+                                <li><a href="/cruises/" class="${isActive('cruises')}">Круизы</a></li>
                             </ul>
                         </li>
-                        <li><a href="/#about">О нас</a></li>
+                        <li><a href="/about/" class="${isActive('about')}">О нас</a></li>
                         <li><a href="/#contact">Контакты</a></li>
+                        <li><a href="/search/" class="${isActive('search')}">Онлайн‑поиск тура</a></li>
+                        <li><a class="nav-cta" href="https://wa.me/79952817399?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D1%82%D1%83%D1%80%D0%B0" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                     </ul>
                     <div class="mobile-menu-toggle">
                         <span></span>
@@ -159,7 +164,6 @@ class Components {
     ${content}
 
     ${this.renderFooter()}
-    ${this.renderWhatsAppButton()}
 
     <script src="script.js"></script>
     <script src="components.js"></script>

@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #18b9c9;
-    --primary-dark: #0e97a6;
-    --secondary-color: #fffaed;
-    --text-color: #22454e;
+    /* Brand palette from logo */
+    --brand-midnight-green: #004953;   /* Airplane, text PTA, Polyglot Travel Agency */
+    --brand-hooker-green: #49796B;     /* Waves/route and lower arc */
+    --brand-ash-gray: #B2BEB5;         /* Light wave streak */
+    --brand-sun: #FCA987;              /* Sun element */
+
+    /* Additional colors for elements */
+    --brand-dark-graphite: #28292D;    /* For headings */
+    --brand-peach: #F69358;            /* For accents */
+
+    /* Background and main colors */
+    --background-main: #fffaed;        /* Main background from requirements */
+
+    /* UI tokens */
+    --primary-color: var(--brand-midnight-green);
+    --primary-dark: var(--brand-hooker-green);
+    --secondary-color: var(--background-main);
+    --text-color: var(--brand-dark-graphite);
     --light-text: #ffffff;
     --background-light: #f4fafb;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --accent-light: #e3f8f8;
+    --accent-light: #e7f0ee;
+    --accent-color: var(--brand-sun);
+    --peach-accent: var(--brand-peach);
 }
 
 * {
@@ -87,13 +103,13 @@ a {
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 550px;
+    max-width: 650px;
     padding: 0 20px 0 50px;
 }
 
 .hero h1 {
     color: var(--light-text);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 25px;
@@ -102,11 +118,43 @@ a {
 
 .hero h2 {
     color: var(--light-text);
-    font-size: clamp(1rem, 5vw, 2rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 25px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 30px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* QR Code Styling */
+.qr-cta {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: var(--shadow);
+    padding: 8px;
+}
+
+.qr-text {
+    color: var(--light-text);
+    max-width: 380px;
+    opacity: 0.95;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Hide QR on mobile */
+@media (max-width: 768px) {
+    .qr-cta {
+        display: none;
+    }
 }
 
 .hero-person {
@@ -201,23 +249,52 @@ a {
 }
 
 .about-content h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.about-content p {
-    font-size: 18px;
-    line-height: 1.6;
+.about-content h3 {
+    color: var(--brand-secondary);
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.about-section {
     margin-bottom: 25px;
-    max-width: 600px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.about-conclusion {
+    margin: 30px 0 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--accent-light), #f0f8f5);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.about-conclusion p {
+    font-size: 18px;
+    color: var(--brand-primary);
+    margin: 0;
+}
+
+.about-social {
+    text-align: left;
 }
 
 .social-button {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 24px;
+    padding: 12px 14px;
     background-color: var(--primary-color);
     color: white;
     border-radius: 30px;
@@ -326,13 +403,6 @@ a {
     position: relative;
 }
 
-/* HOT DEALS SECTION */
-.hot-deals {
-    padding: 100px 0;
-    background-color: var(--background-light);
-    position: relative;
-}
-
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -415,14 +485,130 @@ a {
     padding: 12px;
 }
 
-/* WHY CHOOSE SECTION */
+/* WHY CHOOSE US SECTION (УТП) */
 .why-choose {
-    background-color: var(--accent-light);
-    padding: 100px 0;
+    padding: 80px 0;
+    background: var(--background-main);
     position: relative;
-    overflow: hidden;
 }
 
+.why-choose .section-header h2 {
+    color: var(--text-color);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.why-choose .section-header p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.5;
+}
+
+.why-back {
+    padding: 80px 0;
+    background: var(--background-light);
+    position: relative;
+}
+
+.why-back .section-header h2 {
+    color: var(--text-color);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.why-back .section-header p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.5;
+}
+
+.utp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.utp-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 73, 83, 0.1);
+}
+
+.utp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.utp-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--peach-accent), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.utp-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+.utp-card h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.utp-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.utp-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive для УТП блока */
+@media (max-width: 768px) {
+    .utp-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .utp-card {
+        padding: 30px 20px;
+    }
+
+    .why-choose {
+        padding: 60px 0;
+    }
+}
+
+/* OLD WHY CHOOSE SECTION (для совместимости) */
 .benefits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -450,7 +636,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
     border-radius: 50%;
     color: var(--primary-color);
     font-size: 30px;
@@ -472,7 +658,7 @@ a {
 /* TESTIMONIALS SECTION */
 .testimonials {
     padding: 100px 0;
-    background-color: var(--background-light);
+    background-color: var(--background-main);
 }
 
 .testimonial-slider {
@@ -587,7 +773,7 @@ a {
 /* CONTACT SECTION */
 .contact {
     padding: 100px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
     position: relative;
     overflow: hidden;
 }
@@ -687,14 +873,13 @@ textarea.form-input {
 }
 
 .footer-logo {
-    font-size: 24px;
-    font-weight: 700;
     margin-bottom: 20px;
     display: inline-block;
 }
 
-.footer-logo span {
-    color: var(--primary-color);
+.footer-logo-img {
+    height: 50px;
+    width: auto;
 }
 
 .footer-about p {
@@ -863,6 +1048,83 @@ textarea.form-input {
     z-index: 1;
 }
 
+/* WHY TRUST SECTION */
+.why-trust {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fffaed 0%, #f8f9fa 100%);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.trust-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 73, 83, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.trust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 73, 83, 0.15);
+}
+
+.trust-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+}
+
+.trust-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.trust-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.trust-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .trust-card {
+        padding: 40px 30px;
+    }
+}
+
 /* ANIMATIONS */
 @keyframes float {
     0% {
@@ -906,13 +1168,13 @@ textarea.form-input {
 }
 
 .nav-logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--text-color);
+    display: flex;
+    align-items: center;
 }
 
-.nav-logo span {
-    color: var(--primary-color);
+.nav-logo-img {
+    height: 45px;
+    width: auto;
 }
 
 .nav-links {
@@ -992,6 +1254,26 @@ textarea.form-input {
     color: var(--primary-color);
 }
 
+/* Nav CTA */
+.nav-cta {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--brand-sun), #ffb69e);
+    color: var(--brand-primary) !important;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(252, 169, 135, 0.4);
+}
+.nav-cta i {
+    font-size: 18px;
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -1041,6 +1323,33 @@ textarea.form-input {
 .whatsapp-button:hover {
     transform: scale(1.1);
 }
+
+/* WhatsApp tooltip */
+.whatsapp-button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 70px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+}
+.whatsapp-button:hover::after { opacity: 1; }
+
+/* Footer */
+.footer-disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #667;
+}
+.footer-disclaimer a { color: var(--primary-color); text-decoration: underline; }
 
 /* MEDIA QUERIES */
 @media (max-width: 992px) {

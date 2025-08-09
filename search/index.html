@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн‑поиск тура | Полиглот Тревел</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div id="navigation-placeholder"></div>
+
+  <!-- Search Hero -->
+  <section class="search-hero" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); padding: 120px 0 60px; color: white; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px;">Найдите свой идеальный тур</h1>
+      <p style="font-size: 1.2rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">Удобный онлайн-поиск туров по всем направлениям. Актуальные цены и предложения от проверенных туроператоров.</p>
+    </div>
+  </section>
+
+  <!-- Search Content -->
+  <section class="search-content" style="padding: 60px 0; background: var(--secondary-color); min-height: 600px;">
+    <div class="container">
+      <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0, 73, 83, 0.1); margin-bottom: 40px;">
+        <h2 style="text-align: center; color: var(--brand-primary); margin-bottom: 30px;">Поиск туров от Tourvisor</h2>
+        <!-- Место для виджета Tourvisor -->
+        <div style="min-height: 400px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 15px; border: 2px dashed #ddd;">
+          <div style="text-align: center; color: #999;">
+            <i class="fas fa-search" style="font-size: 48px; margin-bottom: 20px;"></i>
+            <p>Виджет поиска туров будет добавлен здесь</p>
+            <p style="font-size: 14px;">Интеграция с Tourvisor API</p>
+          </div>
+        </div>
+        <!-- Пример подключения: <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script> -->
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 60px;">
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; margin: 0 auto 15px; background: linear-gradient(135deg, var(--brand-sun), #ffb69e); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); font-size: 24px;">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <h3 style="color: var(--brand-primary); margin-bottom: 10px;">Все направления</h3>
+          <p>Туры по всему миру: от популярных курортов до экзотических стран</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; margin: 0 auto 15px; background: linear-gradient(135deg, var(--brand-sun), #ffb69e); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); font-size: 24px;">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3 style="color: var(--brand-primary); margin-bottom: 10px;">Актуальные цены</h3>
+          <p>Обновление цен в реальном времени от туроператоров</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; margin: 0 auto 15px; background: linear-gradient(135deg, var(--brand-sun), #ffb69e); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-primary); font-size: 24px;">
+            <i class="fas fa-filter"></i>
+          </div>
+          <h3 style="color: var(--brand-primary); margin-bottom: 10px;">Удобные фильтры</h3>
+          <p>Найдите тур по вашим параметрам: даты, бюджет, тип отдыха</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #f8f9fa, var(--secondary-color)); border-radius: 20px; margin-top: 40px;">
+        <h2 style="color: var(--brand-primary); margin-bottom: 20px;">Нужна помощь с выбором?</h2>
+        <p style="margin-bottom: 25px; color: var(--text-color);">Я помогу подобрать идеальный тур под ваши пожелания и бюджет</p>
+        <a href="https://wa.me/79952817399?text=Здравствуйте! Помогите подобрать тур" class="btn" style="background: linear-gradient(135deg, var(--brand-sun), #ffb69e); color: var(--brand-primary);">
+          <i class="fab fa-whatsapp"></i> Получить персональную консультацию
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div id="whatsapp-placeholder"></div>
+
+  <script src="../script.js"></script>
+  <script src="../components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('search');
+      document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
+      document.getElementById('whatsapp-placeholder').innerHTML = Components.renderWhatsAppButton();
+      Components.init();
+    });
+  </script>
+
+  <!-- DALL·E hero/cover prompt for search page (если нужна обложка):
+  "Minimal premium travel UI illustration for search tours, abstract magnifying glass over world map, soft gradients in brand colors #004953 and #49796B, subtle accent glow #FCA987, clean, no text, high-res, negative space"
+  -->
+</body>
+</html>
+

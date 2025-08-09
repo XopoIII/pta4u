@@ -63,9 +63,12 @@
     <!-- DALL-E Hero Image Prompt: "Dubai skyline at blue hour with Burj Khalifa as centerpiece, modern skyscrapers with illuminated windows, Dubai Fountain show in foreground, luxury yachts in marina, deep blue evening sky transitioning to night, city lights reflection on water, photorealistic cityscape photography, ultra modern architecture, 16:9 aspect ratio" -->
     <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1920x1080/4682B4/FFFFFF?text=UAE+Dubai+Hero') no-repeat center center; background-size: cover;">
         <div class="hero-content">
-            <h1>ОАЭ<br>Восточная роскошь</h1>
-            <p class="hero-subtitle">Современные мегаполисы, роскошные отели, золотые пляжи и восточное гостеприимство</p>
-            <a href="#contact" class="btn">Забронировать тур</a>
+            <h1>🌴 ОАЭ — коллекция вдохновляющих впечатлений и уникальная палитра эмоций</h1>
+            <p class="hero-subtitle">Каждый эмират — отдельный мир, со своими культурными особенностями, настроением, ритмом и стилем. Мы создаём для вас отдых в ОАЭ — от семейных каникул до романтических побегов и вдохновляющих поездок с друзьями. Вы просто выбираете настроение — остальное берём на себя мы.</p>
+            <div class="hero-accent" style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.15); border-radius: 10px; backdrop-filter: blur(10px);">
+                <strong style="color: var(--brand-sun);">Премиальный сервис. Идеальные маршруты. Отели, которым можно доверять.</strong>
+            </div>
+            <a href="#contact" class="btn">Подобрать идеальный тур в ОАЭ</a>
         </div>
         <svg class="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
             <path fill="#fffaed" fill-opacity="1"
@@ -73,38 +76,150 @@
             </path>
         </svg>
     </section>
-
-    <!-- COUNTRY INFO SECTION -->
-    <section class="country-info">
+    
+    <!-- Почему мы (мини-блок) [mock copy] -->
+    <section class="why-choose" style="padding:60px 0;">
         <div class="container">
-            <div class="info-grid">
-                <div class="info-content">
-                    <h2>ОАЭ — оазис роскоши</h2>
-                    <p>Объединенные Арабские Эмираты – это уникальное государство, где восточные традиции гармонично сочетаются с ультра-современными технологиями и архитектурой. Здесь каждый эмират имеет свою неповторимую атмосферу.</p>
-                    <p>Дубай поражает футуристическими небоскребами и роскошными торговыми центрами, Абу-Даби восхищает культурными достопримечательностями, а Шарджа сохраняет аутентичный арабский колорит.</p>
-                    <p>Золотые пляжи Персидского залива, world-class отели, изысканная кухня и безграничные возможности для шоппинга делают ОАЭ идеальным местом для роскошного отдыха.</p>
+            <div class="section-header">
+                <h2>Почему нам доверяют</h2>
+                <p>Коротко о главном: качество, экспертность, надёжность и удобство.</p>
+            </div>
+            <div class="benefits">
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-search"></i></div><h3 class="benefit-title">Выбираем только лучшее</h3><p class="benefit-text">Рекомендуем проверенные отели и маршруты.</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="benefit-title">Экспертность</h3><p class="benefit-text">Учимся, инспектируем, следим за трендами.</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-shield-alt"></i></div><h3 class="benefit-title">Надёжность</h3><p class="benefit-text">Прозрачность и поддержка в любой момент.</p></div>
+                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div><h3 class="benefit-title">Удобство</h3><p class="benefit-text">Дистанционное оформление или встреча в офисе.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMIRATES SECTION -->
+    <section class="emirates-info" style="padding: 80px 0; background: var(--secondary-color);">
+        <div class="container">
+            <div class="section-header">
+                <h2>В каких эмиратах отдыхать и что посмотреть</h2>
+                <p>Каждый эмират предлагает уникальные впечатления и возможности для отдыха</p>
+            </div>
+            
+            <div class="emirates-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div class="emirate-card" style="background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--brand-primary); margin-bottom: 15px;">🏙️ Дубай</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Достопримечательности:</strong> Бурдж‑Халифа, шоу фонтанов, Дубай Молл, Музей будущего, Burj Al Arab, Пальма Джумейра</p>
+                    <p style="margin-bottom: 15px; color: var(--brand-secondary); font-weight: 500;">Рекомендуемые отели:</p>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: var(--text-color);">
+                        <li>Atlantis The Royal</li>
+                        <li>Madinat Jumeirah</li>
+                        <li>Jumeirah Beach Hotel</li>
+                        <li>One&Only The Palm</li>
+                    </ul>
                 </div>
-                <div class="info-image">
-                    <!-- DALL-E Info Image Prompt: "Luxury beach resort in Dubai with Burj Al Arab hotel in background, pristine white sand beach, turquoise Persian Gulf water, palm trees, beach cabanas and loungers, clear blue sky, modern architecture meeting traditional Arabic design, photorealistic travel photography, bright sunny day" -->
-                    <img src="https://via.placeholder.com/800x400/87CEEB/FFFFFF?text=UAE+Beach+Resort" alt="ОАЭ Дубай" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);">
+                
+                <div class="emirate-card" style="background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--brand-primary); margin-bottom: 15px;">🕌 Абу‑Даби</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Достопримечательности:</strong> Мечеть шейха Зайда, Саадият, Лувр Абу‑Даби, Ferrari Park, пляжи Нурай Айленд</p>
+                    <p style="margin-bottom: 15px; color: var(--brand-secondary); font-weight: 500;">Рекомендуемые отели:</p>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: var(--text-color);">
+                        <li>Jumeirah at Saadiyat</li>
+                        <li>Rixos Premium</li>
+                        <li>Anantara Al Yamm Villas</li>
+                    </ul>
+                </div>
+                
+                <div class="emirate-card" style="background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--brand-primary); margin-bottom: 15px;">🏜️ Другие эмираты</h3>
+                    <p style="margin-bottom: 10px; line-height: 1.6;"><strong>Рас‑эль‑Хайма:</strong> уединение среди природы/пустыни; эко‑туры, виллы с видами</p>
+                    <p style="margin-bottom: 10px; line-height: 1.6;"><strong>Фуджейра и Умм‑Аль‑Кувейн:</strong> спокойные пляжи, хорошо для семей</p>
+                    <p style="line-height: 1.6;"><strong>Шарджа и Аджман:</strong> культурные центры, отдых у моря в спокойной обстановке</p>
                 </div>
             </div>
-
-            <div class="info-highlights">
-                <div class="highlight-card">
-                    <div class="highlight-icon">🏙️</div>
-                    <h3 class="highlight-title">Современная архитектура</h3>
-                    <p class="highlight-text">Бурдж-Халифа, Бурдж-эль-Араб и другие архитектурные шедевры</p>
+        </div>
+    </section>
+    
+    <!-- VACATION SCENARIOS SECTION -->
+    <section class="vacation-scenarios" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Сценарии отдыха</h2>
+                <p>Выберите формат путешествия, который подходит именно вам</p>
+            </div>
+            
+            <div class="scenarios-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div class="scenario-card" style="background: linear-gradient(135deg, #e7f0ee, white); padding: 35px; border-radius: 20px; border-left: 5px solid var(--brand-sun);">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 50px; height: 50px; background: var(--brand-sun); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-child" style="color: var(--brand-primary); font-size: 20px;"></i>
+                        </div>
+                        <h3 style="color: var(--brand-primary); margin: 0;">С детьми</h3>
+                    </div>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">Клубы/анимация, аквапарки, семейные номера</p>
+                    <p style="margin-bottom: 10px; color: var(--brand-secondary); font-weight: 500;">Рекомендуемые отели:</p>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: var(--text-color); font-size: 15px;">
+                        <li>Atlantis The Palm</li>
+                        <li>Rixos Saadiyat</li>
+                        <li>JA The Resort</li>
+                        <li>Jumeirah Beach Hotel</li>
+                    </ul>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🛍️</div>
-                    <h3 class="highlight-title">Лучший шоппинг</h3>
-                    <p class="highlight-text">Грандиозные торговые центры с мировыми брендами и tax-free</p>
+                
+                <div class="scenario-card" style="background: linear-gradient(135deg, #fef7f0, white); padding: 35px; border-radius: 20px; border-left: 5px solid var(--brand-secondary);">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 50px; height: 50px; background: var(--brand-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-heart" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <h3 style="color: var(--brand-primary); margin: 0;">Романтика для двоих</h3>
+                    </div>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">Уединённые пляжи, виллы, гастрономия и SPA</p>
+                    <p style="margin-bottom: 10px; color: var(--brand-secondary); font-weight: 500;">Рекомендуемые отели:</p>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: var(--text-color); font-size: 15px;">
+                        <li>Banyan Tree Dubai</li>
+                        <li>One&Only The Palm</li>
+                        <li>Al Maha Desert Resort</li>
+                        <li>Anantara The Palm</li>
+                    </ul>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🏖️</div>
-                    <h3 class="highlight-title">Роскошные курорты</h3>
-                    <p class="highlight-text">Элитные отели и beach clubs с безупречным сервисом</p>
+                
+                <div class="scenario-card" style="background: linear-gradient(135deg, #f0f8f5, white); padding: 35px; border-radius: 20px; border-left: 5px solid var(--brand-primary);">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 50px; height: 50px; background: var(--brand-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-users" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <h3 style="color: var(--brand-primary); margin: 0;">С друзьями</h3>
+                    </div>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">Виллы с бассейнами, ночная жизнь, яхты, сафари, гастро‑туры</p>
+                    <p style="margin-bottom: 10px; color: var(--brand-secondary); font-weight: 500;">Рекомендуемые отели:</p>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.6; color: var(--text-color); font-size: 15px;">
+                        <li>W Dubai</li>
+                        <li>Address Beach</li>
+                        <li>Sofitel The Palm</li>
+                        <li>Bvlgari Resort Dubai</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SEASONS & CLIMATE SECTION -->
+    <section class="seasons-climate" style="padding: 60px 0; background: linear-gradient(135deg, var(--accent-light), var(--secondary-color));">
+        <div class="container">
+            <div class="section-header">
+                <h2>Сезонность и климат</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--brand-sun), #ffb69e); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-calendar-check" style="color: var(--brand-primary); font-size: 24px;"></i>
+                    </div>
+                    <h3 style="color: var(--brand-primary); margin-bottom: 15px;">Оптимальное время</h3>
+                    <p style="font-size: 18px; font-weight: 600; color: var(--brand-secondary); margin-bottom: 10px;">Октябрь — Апрель</p>
+                    <p style="line-height: 1.6; color: var(--text-color);">Комфортная температура, идеально для пляжного отдыха и экскурсий</p>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #ffd700, #ffb347); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-sun" style="color: #d2691e; font-size: 24px;"></i>
+                    </div>
+                    <h3 style="color: var(--brand-primary); margin-bottom: 15px;">Летний сезон</h3>
+                    <p style="font-size: 18px; font-weight: 600; color: var(--brand-secondary); margin-bottom: 10px;">Май — Сентябрь</p>
+                    <p style="line-height: 1.6; color: var(--text-color);">Жарко, но возможны комфортные варианты с акциями и специальными предложениями</p>
                 </div>
             </div>
         </div>
@@ -241,6 +356,9 @@
                         <input type="email" id="contactEmail" class="form-input" placeholder="Email *" required>
                         <textarea id="contactMessage" class="form-input" placeholder="Ваше сообщение..."></textarea>
                         <button type="submit" class="btn" style="width: 100%;">Отправить в WhatsApp</button>
+                        <div style="margin-top:10px;font-size:14px;">
+                            Или <a href="https://wa.me/79952817399?text=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%9E%D0%90%D0%AD" target="_blank" rel="noopener" style="color:var(--primary-color);text-decoration:underline;">написать мне в WhatsApp</a>
+                        </div>
                     </form>
                 </div>
             </div>

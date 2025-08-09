@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас | Полиглот Тревел</title>
+  <meta name="description" content="Полиглот Тревел — команда, которая создаёт атмосферные путешествия с премиальным сервисом и вниманием к деталям.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div id="navigation-placeholder"></div>
+
+  <section class="about" style="padding-top:120px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>О нас</h2>
+        <p>Тексты ниже — на моках из брифа. По подтверждению заменим на финальные.</p>
+      </div>
+
+      <div class="benefits" style="margin-top:24px;">
+        <div class="benefit-card" style="text-align:left;">
+          <h3 class="benefit-title">Кто мы</h3>
+          <p class="benefit-text">Полиглот Тревел — это не просто туристическое агентство. Это команда, для которой каждый отдых — не «очередной тур», а уникальный, важный и ценный запрос, за которым стоят ваши желания, настроение, стиль жизни и ожидания.</p>
+        </div>
+        <div class="benefit-card" style="text-align:left;">
+          <h3 class="benefit-title">Для кого и как</h3>
+          <p class="benefit-text">Мы создаём атмосферные путешествия для семей с детьми, романтических пар и компаний друзей — продуманные до мелочей, комфортные, лёгкие и вдохновляющие.</p>
+        </div>
+        <div class="benefit-card" style="text-align:left;">
+          <h3 class="benefit-title">Что рекомендуем</h3>
+          <p class="benefit-text">Для вашего отдыха мы рекомендуем только те отели и маршруты, в качестве которых уверены: отбираем их на основе личного опыта, профессиональных инспекций и сотрудничества с надёжными партнёрами.</p>
+        </div>
+        <div class="benefit-card" style="text-align:left;">
+          <h3 class="benefit-title">Экспертность</h3>
+          <p class="benefit-text">Мы постоянно развиваем свою экспертность: проходим профильные обучения, следим за лучшими отельными новинками, участвуем в туристических выставках и профессиональных турах. Это позволяет нам предлагать только актуальные, качественные и по‑настоящему подходящие решения.</p>
+        </div>
+        <div class="benefit-card" style="text-align:left;">
+          <h3 class="benefit-title">Надёжность и сервис</h3>
+          <p class="benefit-text">С нами в путешествии всё под контролем: проверенные партнёры, юридическая прозрачность, надёжность и поддержка в любой момент.</p>
+        </div>
+        <div class="benefit-card" style="text-align:left;">
+          <h3 class="benefit-title">Удобство</h3>
+          <p class="benefit-text">Все этапы — от подбора тура до заключения договора и оплаты — можно пройти дистанционно. А если вам ближе живое общение — мы рады видеть вас в офисе: угостим кофе и подберём идеальное путешествие вместе.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:24px; text-align:center;">
+        <em>Потому что вы достойны самого лучшего.</em>
+      </div>
+      
+      <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="/index.html#contact" class="btn">Запросить персональный подбор</a>
+        <a href="https://wa.me/79952817399" target="_blank" rel="noopener" class="social-button" style="background:var(--brand-sun);color:#2a2a2a"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div id="whatsapp-placeholder"></div>
+
+  <script src="../script.js"></script>
+  <script src="../components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('about');
+      document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
+      document.getElementById('whatsapp-placeholder').innerHTML = Components.renderWhatsAppButton();
+      Components.init();
+    });
+  </script>
+</body>
+</html>
+

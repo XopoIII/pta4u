@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Круизы | Полиглот Тревел</title>
+  <meta name="description" content="Морские и речные круизы. Подберём маршрут, лайнер и каюту под ваши пожелания.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div id="navigation-placeholder"></div>
+
+  <section class="about" style="padding-top:120px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Круизы</h2>
+        <p>Скоро здесь появится раздел с круизами: морскими и речными, с лучшими лайнерами и маршрутами.</p>
+      </div>
+      <div class="benefit-card" style="text-align:left; max-width:900px; margin:24px auto;">
+        <p>Уже сейчас можно оставить заявку на персональный подбор круиза: мы учтём желаемые даты, направление, тип лайнера и каюты.</p>
+        <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="/index.html#contact" class="btn">Оставить заявку</a>
+          <a href="https://wa.me/79952817399?text=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D1%80%D1%83%D0%B8%D0%B7%D1%8B" target="_blank" rel="noopener" class="social-button" style="background:var(--brand-sun);color:#2a2a2a"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div id="whatsapp-placeholder"></div>
+
+  <script src="../script.js"></script>
+  <script src="../components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('cruises');
+      document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
+      document.getElementById('whatsapp-placeholder').innerHTML = Components.renderWhatsAppButton();
+      Components.init();
+    });
+  </script>
+
+  <!-- DALL·E prompt (cover image idea):
+  "Premium cruise travel hero, elegant cruise ship silhouette at golden hour with calm ocean, brand colors #004953 and #49796B with warm accent #FCA987, minimal, no text, high-res"
+  -->
+</body>
+</html>
+
