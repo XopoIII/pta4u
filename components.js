@@ -7,14 +7,12 @@ class Components {
                 <div class="footer-container">
                     <div class="footer-about">
                         <a href="/" class="footer-logo">
-                            <img src="./logo2withoutBgClean_small.png" alt="Полиглот Тревел" class="footer-logo-img">
+                            <img src="/logo2withoutBgClean_small.png" alt="Полиглот Тревел" class="footer-logo-img">
                         </a>
-                        <p class="footer-slogan">Премиальный сервис. Идеальный отдых. Персональный подход.</p>
+                        <p class="footer-slogan">Полиглот Тревел — просто наслаждайтесь путешествием.</p>
                         <div class="footer-social">
-                            <a href="https://www.instagram.com/nadezhda_polyglot/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="https://t.me/" class="social-icon" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                             <a href="https://wa.me/79952817399" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://vk.com/" class="social-icon" aria-label="VK"><i class="fab fa-vk"></i></a>
                         </div>
                     </div>
 
@@ -141,6 +139,7 @@ class Components {
     <title>${title}</title>
     <meta name="description" content="${description}">
     <meta name="keywords" content="${keywords}">
+    <link rel="icon" type="image/png" href="/favicon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -171,8 +170,37 @@ class Components {
 </html>`;
     }
 
+    static renderFavicon(isSubdirectory = false) {
+        const faviconPath = isSubdirectory ? '/favicon.png' : '/favicon.png';
+        return `<link rel="icon" type="image/png" href="${faviconPath}">`;
+    }
+
+    static initFavicon() {
+        // Определяем, находимся ли мы в подпапке
+        const isSubdirectory = window.location.pathname !== '/' && window.location.pathname.split('/').length > 2;
+
+        // Проверяем, есть ли уже favicon
+        const existingFavicon = document.querySelector('link[rel="icon"]');
+        if (!existingFavicon) {
+            document.head.insertAdjacentHTML('beforeend', this.renderFavicon(isSubdirectory));
+        }
+    }
+
+    static renderWhatsAppButton() {
+        return `
+        <div class="whatsapp-float">
+            <a href="https://wa.me/79952817399?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D1%82%D1%83%D1%80%D0%B0%D0%BC" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Написать в WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        `;
+    }
+
     // Инициализация компонентов после загрузки страницы
     static init() {
+        // Добавляем favicon
+        this.initFavicon();
+
         // Инициализация мобильного меню
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');

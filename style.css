@@ -790,10 +790,8 @@ a {
 
 .contact-form {
     flex: 1;
-    background-color: white;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: var(--shadow);
 }
 
 .form-input {
@@ -1343,6 +1341,35 @@ textarea.form-input {
 }
 .whatsapp-button:hover::after { opacity: 1; }
 
+/* WhatsApp Float Component */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+}
+
 /* Footer */
 .footer-disclaimer {
     margin-top: 20px;
@@ -1410,6 +1437,17 @@ textarea.form-input {
         font-size: 24px;
         bottom: 20px;
         right: 20px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 
     /* Mobile Navigation */
