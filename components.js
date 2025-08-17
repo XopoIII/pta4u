@@ -86,7 +86,7 @@ class Components {
             <div class="container">
                 <div class="nav-container">
                     <a href="/" class="nav-logo">
-                        <img src="./logo2withoutBgClean_small.png" alt="Полиглот Тревел" class="nav-logo-img">
+                        <img src="/logo2withoutBgClean_small.png" alt="Полиглот Тревел" class="nav-logo-img">
                     </a>
                     <ul class="nav-links">
                         <li><a href="/" class="${isActive('home')}">Главная</a></li>
