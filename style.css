@@ -1520,3 +1520,373 @@ textarea.form-input {
         grid-template-columns: 1fr;
     }
 }
+
+/* EMIRATES CITY CARDS WITH IMAGES */
+.emirate-detailed {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.emirate-detailed:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.city-image-placeholder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Background images for each city */
+.city-image-placeholder[data-city="dubai"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/dubai-city.jpg') center/cover no-repeat;
+}
+
+.city-image-placeholder[data-city="abu-dhabi"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/abu-dhabi-city.jpg') center/cover no-repeat;
+}
+
+.city-image-placeholder[data-city="sharjah"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/sharjah-city.jpg') center/cover no-repeat;
+}
+
+.city-image-placeholder[data-city="ajman"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/ajman-city.jpg') center/cover no-repeat;
+}
+
+.city-image-placeholder[data-city="ras-al-khaimah"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/ras-al-khaimah-city.jpg') center/cover no-repeat;
+}
+
+.city-image-placeholder[data-city="fujairah"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/fujairah-city.jpg') center/cover no-repeat;
+}
+
+.city-image-placeholder[data-city="umm-al-quwain"] {
+    background: linear-gradient(to left,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,0.8) 70%,
+        white 90%),
+        url('uae/umm-al-quwain-city.jpg') center/cover no-repeat;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .city-image-placeholder {
+        position: static;
+        width: 100%;
+        height: 200px;
+        margin: -40px -40px 20px -40px;
+        opacity: 1;
+    }
+
+    .emirate-detailed > div[style*="z-index: 2"] {
+        position: static !important;
+    }
+}
+
+/* UAE PAGE SPECIFIC STYLES */
+.emirates-info {
+    padding: 80px 0;
+    background: var(--secondary-color);
+}
+
+.emirate-card {
+    margin: 50px 0;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.emirate-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.emirate-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,0.8) 60%, white 80%);
+    z-index: 1;
+}
+
+.emirate-content {
+    position: relative;
+    z-index: 2;
+}
+
+.emirate-title {
+    color: var(--brand-primary);
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.emirate-description {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.emirate-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.emirate-features h4 {
+    color: var(--brand-secondary);
+    margin-bottom: 15px;
+}
+
+.emirate-features ul {
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.emirate-features ul li {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    backdrop-filter: blur(1px);
+    display: block;
+}
+
+.emirate-highlight {
+    background: var(--accent-light);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid var(--brand-sun);
+}
+
+.emirate-highlight p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.vacation-scenarios {
+    padding: 80px 0;
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.scenario-card {
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.scenario-card.family {
+    background: linear-gradient(135deg, #e7f0ee, white);
+    border-left: 5px solid var(--brand-sun);
+}
+
+.scenario-card.romance {
+    background: linear-gradient(135deg, #fef7f0, white);
+    border-left: 5px solid var(--brand-secondary);
+}
+
+.scenario-card.friends {
+    background: linear-gradient(135deg, #f0f8f5, white);
+    border-left: 5px solid var(--brand-primary);
+}
+
+.scenario-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.scenario-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.scenario-icon.family {
+    background: var(--brand-sun);
+}
+
+.scenario-icon.romance {
+    background: var(--brand-secondary);
+}
+
+.scenario-icon.friends {
+    background: var(--brand-primary);
+}
+
+.scenario-icon i {
+    font-size: 20px;
+}
+
+.scenario-icon.family i {
+    color: var(--brand-primary);
+}
+
+.scenario-icon.romance i,
+.scenario-icon.friends i {
+    color: white;
+}
+
+.scenario-card h3 {
+    color: var(--brand-primary);
+    margin: 0;
+}
+
+.scenario-card > p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.scenario-recommendation {
+    margin-bottom: 10px;
+    color: var(--brand-secondary);
+    font-weight: 500;
+}
+
+.scenario-card ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+.seasons-climate {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--accent-light), var(--secondary-color));
+}
+
+.seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.season-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.season-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.season-icon.optimal {
+    background: linear-gradient(135deg, var(--brand-sun), #ffb69e);
+}
+
+.season-icon.summer {
+    background: linear-gradient(135deg, #ffd700, #ffb347);
+}
+
+.season-icon i {
+    font-size: 24px;
+}
+
+.season-icon.optimal i {
+    color: var(--brand-primary);
+}
+
+.season-icon.summer i {
+    color: #d2691e;
+}
+
+.season-card h3 {
+    color: var(--brand-primary);
+    margin-bottom: 15px;
+}
+
+.season-period {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--brand-secondary);
+    margin-bottom: 10px;
+}
+
+.season-card p {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.hero-accent {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-accent strong {
+    color: var(--brand-sun);
+}

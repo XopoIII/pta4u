@@ -122,7 +122,7 @@ class Components {
 
     static renderPageTemplate(options = {}) {
         const {
-            title = 'Полиглот Тревел | Надежда Малашенкова',
+            title = 'Полиглот Тревел',
             description = 'Турагентство Полиглот Тревел - персональные туры и путешествия',
             keywords = 'туры, путешествия, отдых, турагентство',
             currentPage = '',
@@ -184,6 +184,55 @@ class Components {
         if (!existingFavicon) {
             document.head.insertAdjacentHTML('beforeend', this.renderFavicon(isSubdirectory));
         }
+    }
+
+    static renderWhyChooseUs() {
+        return `
+        <section class="why-choose" id="advantages">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Почему нас выбирают</h2>
+                    <p>Премиальный сервис, внимание к деталям и полная уверенность в каждом моменте вашего путешествия</p>
+                </div>
+                <div class="utp-grid">
+                    <div class="utp-card">
+                        <div class="utp-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Проверенное качество</h3>
+                        <p>Мы с особой тщательностью подбираем отели и надёжных партнёров, чтобы рекомендовать вам то, в чём уверены на 100%.</p>
+                    </div>
+
+                    <div class="utp-card">
+                        <div class="utp-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Экспертность</h3>
+                        <p>Мы постоянно повышаем квалификацию, открываем новые направления, инспектируем отели и следим за мировыми трендами, чтобы ваш отдых был безупречным.</p>
+                    </div>
+
+                    <div class="utp-card">
+                        <div class="utp-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Надёжность</h3>
+                        <p>Прозрачные условия, проверенные партнёры и поддержка в любое время. Мы берём на себя все заботы, а вы наслаждаетесь путешествием.</p>
+                    </div>
+
+                    <div class="utp-card">
+                        <div class="utp-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Забота</h3>
+                        <p>Дистанционное оформление или тёплая встреча в офисе за чашкой кофе — в любом формате вы получите внимание, поддержку и маршрут, созданный специально для вас.</p>
+                    </div>
+                </div>
+                <div class="utp-cta">
+                    <a href="#contact" class="btn">Начать планировать путешествие</a>
+                </div>
+            </div>
+        </section>
+        `;
     }
 
     static renderWhatsAppButton() {

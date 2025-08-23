@@ -74,21 +74,8 @@
         </svg>
     </section>
     
-    <!-- Почему мы (мини-блок) [mock copy] -->
-    <section class="why-choose" style="padding:60px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Почему нам доверяют</h2>
-                <p>Качество, экспертность, надёжность и удобство — без компромиссов.</p>
-            </div>
-            <div class="benefits">
-                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-search"></i></div><h3 class="benefit-title">Лучшая подборка</h3><p class="benefit-text">Рекомендуем то, в чём уверены — по опыту и отзывам.</p></div>
-                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div><h3 class="benefit-title">Экспертность</h3><p class="benefit-text">Актуальные знания и инспекции отелей.</p></div>
-                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-shield-alt"></i></div><h3 class="benefit-title">Надёжность</h3><p class="benefit-text">Прозрачные условия и поддержка.</p></div>
-                <div class="benefit-card"><div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div><h3 class="benefit-title">Удобство</h3><p class="benefit-text">Онлайн‑оформление или встреча в офисе.</p></div>
-            </div>
-        </div>
-    </section>
+        <!-- Почему нас выбирают (единый компонент) -->
+    <div id="why-choose-placeholder"></div>
 
     <!-- COUNTRY INFO SECTION -->
     <section class="country-info">
@@ -279,6 +266,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Вставляем навигацию
             document.getElementById('navigation-placeholder').innerHTML = Components.renderNavigation('turkey');
+
+            // Вставляем блок \"Почему нас выбирают\"
+            document.getElementById('why-choose-placeholder').innerHTML = Components.renderWhyChooseUs();
             
             // Вставляем футер
             document.getElementById('footer-placeholder').innerHTML = Components.renderFooter();
