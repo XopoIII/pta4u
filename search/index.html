@@ -33,12 +33,11 @@
   <div id="navigation-placeholder"></div>
 
   <!-- Search Hero -->
-  <section class="search-hero"
-    style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); padding: 120px 0 60px; color: white; text-align: center;">
+  <section class="search-hero">
     <div class="container">
-      <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px;">Найдите свой идеальный тур</h1>
-      <p style="font-size: 1.2rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">Удобный онлайн-поиск туров по всем
-        направлениям. Актуальные цены и предложения от проверенных туроператоров.</p>
+      <h1>Найдите свой идеальный тур</h1>
+      <p>Удобный онлайн-поиск туров по всем направлениям. Актуальные цены и предложения от проверенных туроператоров.
+      </p>
     </div>
   </section>
 
@@ -101,6 +100,64 @@
   <div id="whatsapp-placeholder"></div>
 
   <style>
+    .search-hero {
+      margin-top: 75px;
+      position: relative;
+      padding: 140px 0 80px;
+      background-image: linear-gradient(rgba(0, 73, 83, 0.4), rgba(73, 121, 107, 0.3)), url('search-hero.jpg');
+      background-size: cover;
+      background-position: top center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .search-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 73, 83, 0.1) 100%);
+      pointer-events: none;
+    }
+
+    .search-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .search-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      font-weight: 700;
+    }
+
+    .search-hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .search-hero {
+        background-attachment: scroll;
+        padding: 100px 0 60px;
+      }
+
+      .search-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .search-hero p {
+        font-size: 1rem;
+      }
+    }
+
     .tv-search-form {
       width: 100%;
     }
@@ -116,10 +173,6 @@
       Components.init();
     });
   </script>
-
-  <!-- DALL·E hero/cover prompt for search page (если нужна обложка):
-  "Minimal premium travel UI illustration for search tours, abstract magnifying glass over world map, soft gradients in brand colors #004953 and #49796B, subtle accent glow #FCA987, clean, no text, high-res, negative space"
-  -->
 </body>
 
 </html>
