@@ -11,7 +11,7 @@ class Components {
                         </a>
                         <p class="footer-slogan">Полиглот Тревел — просто наслаждайтесь путешествием.</p>
                         <div class="footer-social">
-                            <a href="https://t.me/" class="social-icon" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                            <a href="https://t.me/pta4u" class="social-icon" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                             <a href="https://wa.me/79952817399" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
